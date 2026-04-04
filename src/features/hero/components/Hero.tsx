@@ -96,7 +96,7 @@ export function Hero({ dict, basics }: HeroProps) {
             </motion.a>
             {dict.cta_resume && (
               <motion.a
-                href="/resume.pdf"
+                href="/portifolio/resume.pdf"
                 download
                 className="flex items-center gap-2 rounded-lg border border-indigo-500 px-8 py-3 font-semibold text-indigo-600 transition-colors hover:bg-indigo-500/10 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-white"
                 whileHover={{ scale: 1.04 }}
@@ -130,7 +130,7 @@ export function Hero({ dict, basics }: HeroProps) {
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-500 opacity-20 blur-xl" />
           <div className="relative h-64 w-64 overflow-hidden rounded-full ring-4 ring-indigo-500/30 ring-offset-4 ring-offset-white dark:ring-offset-slate-900 md:h-72 md:w-72">
             <Image
-              src="/img/profile.jpeg"
+              src="/portifolio/img/profile.jpeg"
               alt={basics.name}
               fill
               sizes="(max-width: 768px) 256px, 288px"
