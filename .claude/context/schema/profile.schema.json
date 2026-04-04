@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "required": ["basics", "skills", "projects", "experience"],
+  "properties": {
+    "basics": {
+      "type": "object",
+      "required": ["name", "title", "summary", "location"],
+      "properties": {
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category"],
+        "properties": {
+          "name": { "type": "string" },
+          "category": { "type": "string" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "techs"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "techs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "repoUrl": { "type": "string" },
+          "stars": { "type": "number" }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "role", "period"],
+        "properties": {
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "period": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm ls:*)",
+      "Bash(mkdir -p \"/Users/clauaraujo11/codes/front-end\\(s\\)/portifolio/public/img\")",
+      "Bash(cp \"/Users/clauaraujo11/codes/front-end\\(s\\)/portifolio/data/img/main-user-left-side.jpeg\" \"/Users/clauaraujo11/codes/front-end\\(s\\)/portifolio/public/img/profile.jpeg\")",
+      "Bash(npx tsc:*)",
+      "Bash(mkdir -p \"/Users/clauaraujo11/codes/front-end\\(s\\)/portifolio/src/lib/three/scenes\")",
+      "Bash(mkdir -p \"/Users/clauaraujo11/codes/front-end\\(s\\)/portifolio/src/hooks\")"
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "basics": {
+    "name": "Cláudio da Silva Araújo Filho",
+    "title": "Backend Developer @ Avanade",
+    "summary": "Software Developer focused on backend with solid experience building, maintaining, and evolving enterprise applications. Strong expertise in Java and Spring Boot for REST APIs, system integrations, and scalable architectures. Experience with both legacy systems (Java 8, JSF) and modern architectures, including containerized and event-driven solutions. Also capable of contributing to frontend using React, TypeScript, and Next.js.",
+    "location": "São Paulo, Brazil",
+    "github": "https://github.com/Claudio712005",
+    "linkedin": "https://www.linkedin.com/in/claudiodesenvolvedorjava/"
+  },
+  "skills": [
+    {
+      "name": "Java",
+      "category": "backend"
+    },
+    {
+      "name": "Kotlin",
+      "category": "backend"
+    },
+    {
+      "name": "Go",
+      "category": "backend"
+    },
+    {
+      "name": "Spring Boot",
+      "category": "backend"
+    },
+    {
+      "name": "Spring Security",
+      "category": "backend"
+    },
+    {
+      "name": "Node.js",
+      "category": "backend"
+    },
+    {
+      "name": "Gin",
+      "category": "backend"
+    },
+    {
+      "name": "React",
+      "category": "frontend"
+    },
+    {
+      "name": "Next.js",
+      "category": "frontend"
+    },
+    {
+      "name": "TypeScript",
+      "category": "frontend"
+    },
+    {
+      "name": "JavaScript",
+      "category": "frontend"
+    },
+    {
+      "name": "JSF",
+      "category": "frontend"
+    },
+    {
+      "name": "PrimeFaces",
+      "category": "frontend"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "frontend"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "database"
+    },
+    {
+      "name": "MySQL",
+      "category": "database"
+    },
+    {
+      "name": "OracleDB",
+      "category": "database"
+    },
+    {
+      "name": "SQL Server",
+      "category": "database"
+    },
+    {
+      "name": "Kafka",
+      "category": "messaging"
+    },
+    {
+      "name": "RabbitMQ",
+      "category": "messaging"
+    },
+    {
+      "name": "Docker",
+      "category": "devops"
+    },
+    {
+      "name": "Docker Compose",
+      "category": "devops"
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "devops"
+    },
+    {
+      "name": "OpenShift",
+      "category": "devops"
+    },
+    {
+      "name": "AWS",
+      "category": "cloud"
+    },
+    {
+      "name": "Azure",
+      "category": "cloud"
+    },
+    {
+      "name": "DDD",
+      "category": "architecture"
+    },
+    {
+      "name": "Clean Architecture",
+      "category": "architecture"
+    },
+    {
+      "name": "Design Patterns",
+      "category": "architecture"
+    },
+    {
+      "name": "JUnit",
+      "category": "testing"
+    },
+    {
+      "name": "Mockito",
+      "category": "testing"
+    },
+    {
+      "name": "MockK",
+      "category": "testing"
+    },
+    {
+      "name": "Jest",
+      "category": "testing"
+    }
+  ],
+  "projects": [
+    {
+      "name": "EventSync API",
+      "description": "This project consists of a notification API that sends messages via both email (using Spring Boot Starter Mail) and SMS (using the Twilio API).",
+      "techs": [
+        "Java",
+        "Docker",
+        "MySql",
+        "Spring Boot",
+        "CI/CD",
+        "JUnit",
+        "AWS",
+        "e-mail",
+        "SMS"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/EventNtfyApi",
+      "stars": null
+    },
+    {
+      "name": "go-microservices-architecture",
+      "description": "This repository is a monorepo containing a microservices architecture developed in Go, using an event-driven approach (EDA) with RabbitMQ as the event bus.The project simulates a decoupled user registration system, where different services communicate through events, allowing scalability, flexibility, and independence between components.",
+      "techs": [
+        "Go",
+        "Gin",
+        "Docker",
+        "MySql",
+        "RabbitMQ",
+        "Menssage Queue",
+        "gomock",
+        "EDA"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/go-microservices-architecture",
+      "stars": null
+    },
+    {
+      "name": "go-task-api",
+      "description": "API back-end for managing tasks developed in Go. The project uses secure hashing for passwords, authentication via JWT token, and API documentation with Swagger.",
+      "techs": [
+        "Go",
+        "Gin",
+        "GORM",
+        "MySql",
+        "JWT",
+        "Swagger"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/go-task-api",
+      "stars": null
+    },
+    {
+      "name": "LibraryControl",
+      "description": "LibraryControl is a REST API for managing book rentals, created as a personal challenge. The goal was to go beyond the ordinary: developing everything without frameworks, using pure Java, with the fewest libraries possible. The idea was to explore what happens `behind the scenes` in Java applications—understanding how each part works, from route creation to authentication and data persistence, without relying on the magic of frameworks.",
+      "techs": [
+        "Java",
+        "MySql",
+        "JWT"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/LibraryControl",
+      "stars": null
+    },
+    {
+      "name": "To-do-List",
+      "description": "This is a To-Do List project developed as part of my learning process, challenging me to go beyond common implementations. Instead of limiting myself to HTML, CSS, and JavaScript, I decided to explore creating a more robust To-Do List with a React frontend and a Java backend using Spring Boot.",
+      "techs": [
+        "Java",
+        "MySql",
+        "JWT",
+        "React",
+        "Spring Boot",
+        "JavaScript",
+        "Sass"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/To-do-List",
+      "stars": null
+    },
+    {
+      "name": "TCAteliê E-commerce Platform",
+      "description": "A full-stack e-commerce platform developed for a real client (TCAteliê), focused on expanding digital presence and increasing sales. The solution includes a web storefront and an administrative dashboard available on both web and Android, enabling efficient business management. The infrastructure evolved from Azure to AWS, applying modern cloud architecture and Infrastructure as Code practices.",
+      "techs": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "JPA",
+        "MapStruct",
+        "React",
+        "Redux",
+        "Tailwind CSS",
+        "Kotlin",
+        "Jetpack Compose",
+        "MySQL",
+        "Azure",
+        "AWS",
+        "Terraform",
+        "NGINX",
+        "Docker"
+      ],
+      "repoUrl": "https://github.com/orgs/grupo-04-3adsb/repositories",
+      "stars": null
+    },
+    {
+      "name": "VisualOps - Hardware Monitoring",
+      "description": "A hardware monitoring system designed for graphic design companies, enabling real-time tracking of CPU, memory, disk, and GPU usage. The solution includes interactive dashboards, Slack-based alerting, and historical data storage for analysis. The project applied ITIL concepts and focused on observability, system reliability, and proactive issue detection.",
+      "techs": [
+        "Java",
+        "Node.js",
+        "MySQL",
+        "SQL Server",
+        "Docker",
+        "AWS EC2",
+        "Slack API",
+        "Firebase",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repoUrl": "https://www.linkedin.com/posts/claudiodesenvolvedorjava_compartilho-com-entusiasmo-o-resultado-do-activity-7207459243183026179-b5FV",
+      "stars": null
+    },
+    {
+      "name": "IoT Monitoring & Web Platform",
+      "description": "An academic project focused on integrating web systems with IoT devices, developed using Scrum methodology and delivered across three sprints. The solution includes a data visualization dashboard, authentication system, database modeling, and full integration between Arduino sensors and backend services, enabling real-time data collection and analysis.",
+      "techs": [
+        "Java",
+        "Node.js",
+        "MySQL",
+        "Arduino",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Chart.js",
+        "Scrum"
+      ],
+      "repoUrl": "https://github.com/TermoTech/sprint3",
+      "stars": null
+    }
+  ],
+  "experience": [
+    {
+      "company": "Avanade",
+      "role": "Backend Developer",
+      "period": "Apr 2026 - Present",
+      "description": "Working on enterprise backend systems, focusing on scalability, performance, and maintainability."
+    },
+    {
+      "company": "Stefanini Brasil",
+      "role": "Backend Developer",
+      "period": "Dec 2025 - Apr 2026",
+      "description": "Maintained and evolved legacy systems, improved performance, and supported production environments using Java and OpenShift."
+    },
+    {
+      "company": "Stefanini Brasil",
+      "role": "Junior Backend Developer",
+      "period": "Oct 2024 - Dec 2025",
+      "description": "Developed APIs with Spring Boot and contributed to frontend with React and TypeScript."
+    },
+    {
+      "company": "Stefanini Brasil",
+      "role": "Software Engineering Intern",
+      "period": "Jan 2024 - Oct 2024",
+      "description": "Worked on legacy systems and modern applications using Java, Spring Boot, and React."
+    }
+  ]
+}

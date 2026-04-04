@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "logo": "<Cláudio />",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "education": "Formação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, sou",
+    "cta_projects": "Ver Projetos",
+    "cta_contact": "Entre em Contato",
+    "cta_resume": "Baixar Currículo"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor backend com experiência prática em Java e Spring Boot, projetando e entregando APIs REST escaláveis e microsserviços. Forte foco em arquitetura limpa, princípios SOLID e boas práticas de segurança. Também atua no frontend com React quando necessário."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Banco de Dados",
+      "devops": "DevOps",
+      "cloud": "Cloud",
+      "messaging": "Mensageria",
+      "architecture": "Arquitetura",
+      "testing": "Testes",
+      "ai": "IA"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "view_code": "Ver Código",
+    "no_repo": "Repositório Privado",
+    "view_more": "Ver Mais",
+    "view_less": "Ver Menos",
+    "read_more": "Ler Mais",
+    "read_less": "Mostrar Menos"
+  },
+  "education": {
+    "title": "Formação Acadêmica"
+  },
+  "experience": {
+    "title": "Experiência",
+    "present": "Presente",
+    "show_more": "Ver mais",
+    "show_less": "Ver menos"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Aberto a novas oportunidades. Fique à vontade para entrar em contato pelo GitHub ou LinkedIn.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "built_with": "Construído com Next.js, TypeScript & Tailwind CSS por Cláudio Araújo em 2026"
+  }
+}

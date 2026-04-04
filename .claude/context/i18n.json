@@ -1,0 +1,10 @@
+{
+  "defaultLocale": "pt-BR",
+  "locales": ["pt-BR", "en", "es", "fr"],
+  "fallbackLocale": "en",
+  "translate": {
+    "enabled": true,
+    "keepTechTerms": true,
+    "keepCompanyNames": true
+  }
+}

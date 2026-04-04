@@ -1,0 +1,9 @@
+{
+  "name": "Cláudio",
+  "role": "Backend Developer",
+  "main-image": "./data/img/main-user-left-side.jpeg",
+  "github": "https://github.com/Claudio712005",
+  "linkedin": "https://www.linkedin.com/in/claudiodesenvolvedorjava/",
+  "location": "Brazil",
+  "focus": ["Java", "Spring Boot", "Kotlin"]
+}
