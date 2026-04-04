@@ -148,7 +148,7 @@
       "name": "Jest",
       "category": "testing"
     },
-        {
+    {
       "name": "Git Hub Copilot",
       "category": "ai"
     },
@@ -166,6 +166,26 @@
     }
   ],
   "projects": [
+    {
+      "name": "Portifolio Pessoal",
+      "description": "Site de portfólio pessoal moderno, responsivo e multilíngue — construído com Next.js 14, TypeScript e Tailwind CSS. Aplicação de página única (SPA) com roteamento por localidade, animações fluidas e fundos 3D interativos. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.",
+      "techs": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "React",
+        "JavaScript",
+        "SPA",
+        "i18n",
+        "Framer Motion",
+        "Three.js",
+        "AI Agents",
+        "Prompt Engineering",
+        "Prompt Versioning for LLMs"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/portifolio",
+      "stars": null
+    },
     {
       "name": "EventSync API",
       "description": "Este projeto consiste em uma API de notificações que envia mensagens tanto por e-mail (utilizando Spring Boot Starter Mail) quanto por SMS (utilizando a API da Twilio).",
