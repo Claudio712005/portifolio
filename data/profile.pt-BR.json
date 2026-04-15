@@ -167,6 +167,22 @@
   ],
   "projects": [
     {
+      "name": "sellvia-android",
+      "description": "O Sellvia Android é o app da plataforma Sellvia, voltado para gestão de produtos, categorias, catálogo e informações de empresa. O aplicativo consome uma API REST e segue os princípios de Clean Architecture com o padrão MVVM.",
+      "techs": [
+        "Kotlin",
+        "Jetpack Compose",
+        "MVVM",
+        "Koin",
+        "Navigation Compose",
+        "Retrofit",
+        "Coil",
+        "Android"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/sellvia-android",
+      "stars": null
+    },
+    {
       "name": "Portifolio Pessoal",
       "description": "Site de portfólio pessoal moderno, responsivo e multilíngue — construído com Next.js 14, TypeScript e Tailwind CSS. Aplicação de página única (SPA) com roteamento por localidade, animações fluidas e fundos 3D interativos. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.",
       "techs": [
