@@ -167,6 +167,25 @@
   ],
   "projects": [
     {
+      "name": "sellvia-api",
+      "description": "API REST backend para gestión de catálogos y productos, desarrollada con Kotlin y Spring Boot. El sistema contempla autenticación, administración de empresas, gestión de productos y categorías, y almacenamiento de activos digitales vía Cloudflare R2.",
+      "techs": [
+        "Kotlin",
+        "Spring Boot",
+        "S3 SDK",
+        "Cloudflare R2",
+        "Docker",
+        "PostgreSQL",
+        "JUnit",
+        "MockK",
+        "Clean Architecture",
+        "Arquitectura Hexagonal",
+        "Flyway"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/sellvia-api",
+      "stars": null
+    },
+    {
       "name": "sellvia-android",
       "description": "Sellvia Android es la app de la plataforma Sellvia, enfocada en la gestión de productos, categorías, catálogo e información de la empresa. La aplicación consume una API REST y sigue los principios de Clean Architecture con el patrón MVVM.",
       "techs": [
