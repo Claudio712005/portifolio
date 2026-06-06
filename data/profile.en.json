@@ -167,6 +167,23 @@
   ],
   "projects": [
     {
+      "name": "mock-smith",
+      "description": "Runtime API mocking engine driven by OpenAPI/Swagger — spins up an HTTP server straight from the contract, with chaos profiles and an interceptor pipeline.",
+      "techs": [
+        "Go",
+        "OpenAPI",
+        "Swagger",
+        "Chi",
+        "Cobra",
+        "gofakeit",
+        "CLI",
+        "YAML",
+        "CI"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/mock-smith",
+      "stars": null
+    },
+    {
       "name": "sellvia-api",
       "description": "API REST backend for managing catalogs and products, developed with Kotlin and Spring Boot. The system includes authentication, company administration, product and category management, and digital asset storage via Cloudflare R2.",
       "techs": [
