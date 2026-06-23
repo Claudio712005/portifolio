@@ -167,6 +167,31 @@
   ],
   "projects": [
     {
+      "name": "HSG HIS Web App",
+      "description": "Plataforma WEB para gerenciamento de informações hospitalares.",
+      "techs": [
+        "Java",
+        "Flyway",
+        "H2 Database",
+        "Maven",
+        "JUnit",
+        "Mockito",
+        "JSF",
+        "PrimeFaces",
+        "JBOSS",
+        "MailHog",
+        "Docker",
+        "Keycloak",
+        "EJB",
+        "JPA",
+        "Hibernate",
+        "MinIO",
+        "Monolito"
+      ],
+      "repoUrl": "https://github.com/Claudio712005/hsg-his-web-app",
+      "stars": null
+    },
+    {
       "name": "mock-smith",
       "description": "Engine de mock de APIs em runtime guiado por OpenAPI/Swagger — sobe um servidor HTTP direto do contrato, com profiles de caos e pipeline de interceptors.",
       "techs": [
