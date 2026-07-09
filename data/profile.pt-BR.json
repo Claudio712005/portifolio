@@ -1,8 +1,8 @@
 {
   "basics": {
     "name": "Cláudio da Silva Araújo Filho",
-    "title": "Desenvolvedor Backend @ Avanade",
-    "summary": "Desenvolvedor de software com foco em backend e experiência sólida na construção, manutenção e evolução de aplicações enterprise. Profundo conhecimento em Java e Spring Boot para APIs REST, integrações de sistemas e arquiteturas escaláveis. Experiência com sistemas legados (Java 8, JSF) e arquiteturas modernas, incluindo soluções containerizadas e orientadas a eventos. Capaz também de contribuir no frontend com React, TypeScript e Next.js.",
+    "title": "Desenvolvedor Backend Pleno @ Avanade",
+    "summary": "Desenvolvedor Back-end Pleno especializado em Java, Kotlin e Spring Boot, com experiência no desenvolvimento e modernização de aplicações corporativas para os setores bancário e de energia. Atuo na construção de APIs REST, microsserviços e integrações utilizando Java 21, Spring WebFlux, Docker, OpenShift, Oracle e PostgreSQL. Experiência na evolução de sistemas legados Java 8, migração para arquiteturas de microsserviços, otimização de performance, processamento concorrente e resolução de incidentes em produção. Aplico Clean Architecture, Arquitetura Hexagonal, DDD e testes automatizados para construir soluções escaláveis e de fácil manutenção.",
     "location": "São Paulo, Brasil",
     "github": "https://github.com/Claudio712005",
     "linkedin": "https://www.linkedin.com/in/claudiodesenvolvedorjava/"
@@ -25,7 +25,19 @@
       "category": "backend"
     },
     {
+      "name": "Spring WebFlux",
+      "category": "backend"
+    },
+    {
       "name": "Spring Security",
+      "category": "backend"
+    },
+    {
+      "name": "Spring Data JPA",
+      "category": "backend"
+    },
+    {
+      "name": "Hibernate",
       "category": "backend"
     },
     {
@@ -41,7 +53,15 @@
       "category": "backend"
     },
     {
+      "name": "Resilience4j",
+      "category": "backend"
+    },
+    {
       "name": "React",
+      "category": "frontend"
+    },
+    {
+      "name": "Angular",
       "category": "frontend"
     },
     {
@@ -105,7 +125,23 @@
       "category": "devops"
     },
     {
+      "name": "GitLab CI/CD",
+      "category": "devops"
+    },
+    {
       "name": "OpenShift",
+      "category": "devops"
+    },
+    {
+      "name": "ArgoCD",
+      "category": "devops"
+    },
+    {
+      "name": "Kubernetes",
+      "category": "devops"
+    },
+    {
+      "name": "Terraform",
       "category": "devops"
     },
     {
@@ -133,6 +169,18 @@
       "category": "architecture"
     },
     {
+      "name": "Microsserviços",
+      "category": "architecture"
+    },
+    {
+      "name": "BFF",
+      "category": "architecture"
+    },
+    {
+      "name": "TDD",
+      "category": "testing"
+    },
+    {
       "name": "JUnit",
       "category": "testing"
     },
@@ -147,6 +195,14 @@
     {
       "name": "Jest",
       "category": "testing"
+    },
+    {
+      "name": "Grafana",
+      "category": "observability"
+    },
+    {
+      "name": "Prometheus",
+      "category": "observability"
     },
     {
       "name": "Git Hub Copilot",
@@ -402,17 +458,17 @@
     {
       "institution": "Anhanguera",
       "degree": "Bacharelado em Engenharia de Software",
-      "period": "2026 – 2029"
+      "period": "Fev 2026 – Dez 2029"
     },
     {
       "institution": "FIAP",
       "degree": "Pós-Graduação em Arquitetura de Software",
-      "period": "2026 – 2026"
+      "period": "Fev 2026 – Dez 2026"
     },
     {
       "institution": "SPTech School",
       "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-      "period": "2023 – 2025"
+      "period": "Ago 2023 – Jun 2025"
     }
   ],
   "experience": [
@@ -420,25 +476,25 @@
       "company": "Avanade",
       "role": "Analista | Desenvolvedor Back-end Pleno",
       "period": "Abr 2026 - Presente",
-      "description": ""
+      "description": "Desenvolvimento de microsserviços e BFFs utilizando Java 21 e Spring Boot para o setor bancário. Implementação de APIs reativas com Spring WebFlux e Project Reactor. Aplicação de Arquitetura Hexagonal, DDD e Clean Architecture na construção de novas funcionalidades. Implementação de padrões de resiliência com Resilience4j (Retry e Circuit Breaker). Desenvolvimento de ferramenta interna em Go para geração automática de mocks HTTP a partir de contratos OpenAPI, reduzindo dependências entre equipes. Participação na evolução de aplicações integradas ao Mainframe. Gerenciamento de ambientes GitOps com ArgoCD. Desenvolvimento de componentes Angular para aplicações FED usando WebViews."
     },
     {
       "company": "Stefanini Brasil",
       "role": "Analista Desenvolvedor Pleno",
       "period": "Dez 2025 - Abr 2026",
-      "description": "Atuação na manutenção e evolução de sistemas legados para uma grande empresa do setor de energia, garantindo estabilidade e continuidade dos serviços. Desenvolvimento de soluções backend em Java com foco em desempenho, confiabilidade e manutenibilidade. Gerenciamento de ambientes de homologação utilizando Red Hat OpenShift, apoiando deploys e troubleshooting. Atuação como referência técnica na equipe, auxiliando na análise de impacto e resolução de problemas em sistemas distribuídos. Investigação e resolução de incidentes em produção. Otimização de processos de exportação de dados, reduzindo tempo de execução e permitindo processamento de grandes volumes. Implementação de melhorias de performance e escalabilidade com uso de paralelismo e concorrência."
+      "description": "Desenvolvimento e evolução de aplicações Java de missão crítica para um dos maiores clientes do setor de energia, garantindo estabilidade e continuidade dos serviços. Sustentação de sistemas legados em Java 8, JSF e PrimeFaces. Implementação de processamento paralelo para exportação de grandes volumes de dados, eliminando timeouts e permitindo processamento de históricos superiores a seis anos. Administração de ambientes Red Hat OpenShift, apoiando deploys e troubleshooting. Atuação como referência técnica na equipe, auxiliando na análise de impacto e resolução de problemas em sistemas distribuídos. Investigação e resolução de incidentes em produção."
     },
     {
       "company": "Stefanini Brasil",
       "role": "Analista Desenvolvedor Júnior",
       "period": "Out 2024 - Dez 2025",
-      "description": "Desenvolvimento e manutenção de APIs com Java e Spring Boot, com foco em escalabilidade e desempenho. Construção de interfaces frontend com React e TypeScript. Aplicação de testes unitários e de integração utilizando JUnit e Mockito, aumentando a confiabilidade do sistema. Participação ativa em times ágeis, contribuindo em cerimônias, planejamento e entregas contínuas. Atuação em apresentações para clientes, alinhando expectativas e demonstrando resultados entregues."
+      "description": "Desenvolvimento de APIs REST utilizando Java e Spring Boot, com foco em escalabilidade e desempenho. Desenvolvimento de interfaces frontend com React e TypeScript. Evolução de sistemas legados Java 8, JSF, PrimeFaces e EJB. Participação na modernização de aplicações para arquitetura de microsserviços. Aplicação de testes unitários e de integração utilizando JUnit e Mockito. Participação ativa em cerimônias Scrum e Sprint Reviews junto ao cliente."
     },
     {
       "company": "Stefanini Brasil",
       "role": "Estagiário de Desenvolvimento de Software",
       "period": "Jan 2024 - Out 2024",
-      "description": "Atuação no desenvolvimento e manutenção de sistemas legados utilizando Java 8, JSF e PrimeFaces. Participação em projetos com tecnologias modernas como Spring Boot, React e TypeScript. Desenvolvimento de APIs RESTful e implementação de testes unitários com JUnit. Uso de ferramentas como Git e SonarLint para controle de versão e qualidade de código. Participação em cerimônias ágeis e code reviews. Reconhecido com promoção para Desenvolvedor Júnior após 10 meses devido ao desempenho e contribuição nos projetos."
+      "description": "Desenvolvimento e manutenção de aplicações Java 8. Construção de APIs REST utilizando Spring Boot. Desenvolvimento de interfaces React. Uso de ferramentas como Git e SonarLint para controle de versão e qualidade de código. Participação em cerimônias ágeis e code reviews. Reconhecido com promoção para Desenvolvedor Júnior após 10 meses devido ao desempenho e contribuição nos projetos."
     }
   ]
 }

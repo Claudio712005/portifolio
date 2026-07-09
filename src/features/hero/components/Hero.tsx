@@ -130,7 +130,7 @@ export function Hero({ dict, basics }: HeroProps) {
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-500 opacity-20 blur-xl" />
           <div className="relative h-64 w-64 overflow-hidden rounded-full ring-4 ring-indigo-500/30 ring-offset-4 ring-offset-white dark:ring-offset-slate-900 md:h-72 md:w-72">
             <Image
-              src="/portifolio/img/profile.jpeg"
+              src="/portifolio/img/profile.png"
               alt={basics.name}
               fill
               sizes="(max-width: 768px) 256px, 288px"

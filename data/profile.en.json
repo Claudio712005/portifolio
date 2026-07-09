@@ -1,8 +1,8 @@
 {
   "basics": {
     "name": "Cláudio da Silva Araújo Filho",
-    "title": "Backend Developer @ Avanade",
-    "summary": "Software Developer focused on backend with solid experience building, maintaining, and evolving enterprise applications. Strong expertise in Java and Spring Boot for REST APIs, system integrations, and scalable architectures. Experience with both legacy systems (Java 8, JSF) and modern architectures, including containerized and event-driven solutions. Also capable of contributing to frontend using React, TypeScript, and Next.js.",
+    "title": "Mid-level Backend Developer @ Avanade",
+    "summary": "Mid-level Back-end Developer specialized in Java, Kotlin, and Spring Boot, with experience developing and modernizing enterprise applications for the banking and energy sectors. I work on building REST APIs, microservices, and integrations using Java 21, Spring WebFlux, Docker, OpenShift, Oracle, and PostgreSQL. Experience in evolving Java 8 legacy systems, migrating to microservices architectures, performance optimization, concurrent processing, and resolving production incidents. I apply Clean Architecture, Hexagonal Architecture, DDD, and automated testing to build scalable and maintainable solutions.",
     "location": "São Paulo, Brazil",
     "github": "https://github.com/Claudio712005",
     "linkedin": "https://www.linkedin.com/in/claudiodesenvolvedorjava/"
@@ -25,7 +25,19 @@
       "category": "backend"
     },
     {
+      "name": "Spring WebFlux",
+      "category": "backend"
+    },
+    {
       "name": "Spring Security",
+      "category": "backend"
+    },
+    {
+      "name": "Spring Data JPA",
+      "category": "backend"
+    },
+    {
+      "name": "Hibernate",
       "category": "backend"
     },
     {
@@ -41,7 +53,15 @@
       "category": "backend"
     },
     {
+      "name": "Resilience4j",
+      "category": "backend"
+    },
+    {
       "name": "React",
+      "category": "frontend"
+    },
+    {
+      "name": "Angular",
       "category": "frontend"
     },
     {
@@ -105,7 +125,23 @@
       "category": "devops"
     },
     {
+      "name": "GitLab CI/CD",
+      "category": "devops"
+    },
+    {
       "name": "OpenShift",
+      "category": "devops"
+    },
+    {
+      "name": "ArgoCD",
+      "category": "devops"
+    },
+    {
+      "name": "Kubernetes",
+      "category": "devops"
+    },
+    {
+      "name": "Terraform",
       "category": "devops"
     },
     {
@@ -133,6 +169,18 @@
       "category": "architecture"
     },
     {
+      "name": "Microservices",
+      "category": "architecture"
+    },
+    {
+      "name": "BFF",
+      "category": "architecture"
+    },
+    {
+      "name": "TDD",
+      "category": "testing"
+    },
+    {
       "name": "JUnit",
       "category": "testing"
     },
@@ -147,6 +195,14 @@
     {
       "name": "Jest",
       "category": "testing"
+    },
+    {
+      "name": "Grafana",
+      "category": "observability"
+    },
+    {
+      "name": "Prometheus",
+      "category": "observability"
     },
     {
       "name": "Git Hub Copilot",
@@ -269,12 +325,12 @@
       "techs": [
         "Java",
         "Docker",
-        "MySql",
+        "MySQL",
         "Spring Boot",
         "CI/CD",
         "JUnit",
         "AWS",
-        "e-mail",
+        "Email",
         "SMS"
       ],
       "repoUrl": "https://github.com/Claudio712005/EventNtfyApi",
@@ -282,14 +338,14 @@
     },
     {
       "name": "go-microservices-architecture",
-      "description": "This repository is a monorepo containing a microservices architecture developed in Go, using an event-driven approach (EDA) with RabbitMQ as the event bus.The project simulates a decoupled user registration system, where different services communicate through events, allowing scalability, flexibility, and independence between components.",
+      "description": "This repository is a monorepo containing a microservices architecture developed in Go, using an event-driven approach (EDA) with RabbitMQ as the event bus. The project simulates a decoupled user registration system, where different services communicate through events, allowing scalability, flexibility, and independence between components.",
       "techs": [
         "Go",
         "Gin",
         "Docker",
-        "MySql",
+        "MySQL",
         "RabbitMQ",
-        "Menssage Queue",
+        "Message Queue",
         "gomock",
         "EDA"
       ],
@@ -303,7 +359,7 @@
         "Go",
         "Gin",
         "GORM",
-        "MySql",
+        "MySQL",
         "JWT",
         "Swagger"
       ],
@@ -312,10 +368,10 @@
     },
     {
       "name": "LibraryControl",
-      "description": "LibraryControl is a REST API for managing book rentals, created as a personal challenge. The goal was to go beyond the ordinary: developing everything without frameworks, using pure Java, with the fewest libraries possible. The idea was to explore what happens `behind the scenes` in Java applications—understanding how each part works, from route creation to authentication and data persistence, without relying on the magic of frameworks.",
+      "description": "LibraryControl is a REST API for managing book rentals, created as a personal challenge. The goal was to go beyond the ordinary: developing everything without frameworks, using pure Java, with the fewest libraries possible. The idea was to explore what happens behind the scenes in Java applications — understanding how each part works, from route creation to authentication and data persistence, without relying on the abstraction of frameworks.",
       "techs": [
         "Java",
-        "MySql",
+        "MySQL",
         "JWT"
       ],
       "repoUrl": "https://github.com/Claudio712005/LibraryControl",
@@ -326,7 +382,7 @@
       "description": "This is a To-Do List project developed as part of my learning process, challenging me to go beyond common implementations. Instead of limiting myself to HTML, CSS, and JavaScript, I decided to explore creating a more robust To-Do List with a React frontend and a Java backend using Spring Boot.",
       "techs": [
         "Java",
-        "MySql",
+        "MySQL",
         "JWT",
         "React",
         "Spring Boot",
@@ -402,43 +458,43 @@
     {
       "institution": "Anhanguera",
       "degree": "Bachelor of Software Engineering",
-      "period": "2026 – 2029"
+      "period": "Feb 2026 – Dec 2029"
     },
     {
       "institution": "FIAP",
       "degree": "Postgraduate in Software Architecture",
-      "period": "2026 – 2026"
+      "period": "Feb 2026 – Dec 2026"
     },
     {
       "institution": "SPTech School",
       "degree": "Associate Degree in Systems Analysis and Development",
-      "period": "2023 – 2025"
+      "period": "Aug 2023 – Jun 2025"
     }
   ],
   "experience": [
     {
       "company": "Avanade",
-      "role": "Analyst | Backend Developer (Mid-level)",
+      "role": "Analyst | Mid-level Backend Developer",
       "period": "Apr 2026 - Present",
-      "description": ""
+      "description": "Development of microservices and BFFs using Java 21 and Spring Boot for the banking sector. Implementation of reactive APIs with Spring WebFlux and Project Reactor. Application of Hexagonal Architecture, DDD, and Clean Architecture in building new features. Implementation of resilience patterns with Resilience4j (Retry and Circuit Breaker). Development of an internal tool in Go for automatic HTTP mock generation from OpenAPI contracts, reducing inter-team dependencies. Participation in evolving Mainframe-integrated applications. Management of GitOps environments with ArgoCD. Development of Angular components for FED applications using WebViews."
     },
     {
       "company": "Stefanini Brasil",
-      "role": "Mid-level Backend Developer",
+      "role": "Mid-level Software Developer",
       "period": "Dec 2025 - Apr 2026",
-      "description": "Worked on maintenance and evolution of legacy systems for a large energy company, ensuring stability and service continuity. Developed backend solutions using Java with focus on performance, reliability and maintainability. Managed staging environments using Red Hat OpenShift, supporting deployments and troubleshooting. Acted as a technical reference within the team, assisting with impact analysis and issue resolution in distributed systems. Investigated and resolved production incidents. Optimized data export processes, reducing execution time and enabling large-scale data processing. Implemented performance and scalability improvements using concurrency and parallelism techniques."
+      "description": "Development and evolution of mission-critical Java applications for one of the largest clients in the energy sector, ensuring stability and service continuity. Maintenance of legacy systems built with Java 8, JSF, and PrimeFaces. Implementation of parallel processing for exporting large data volumes, eliminating timeouts and enabling processing of records spanning over six years of history. Administration of Red Hat OpenShift environments, supporting deployments and troubleshooting. Acted as a technical reference within the team, assisting with impact analysis and issue resolution in distributed systems. Investigation and resolution of production incidents."
     },
     {
       "company": "Stefanini Brasil",
-      "role": "Junior Backend Developer",
+      "role": "Junior Software Developer",
       "period": "Oct 2024 - Dec 2025",
-      "description": "Developed and maintained APIs using Java and Spring Boot with focus on scalability and performance. Built frontend interfaces using React and TypeScript. Applied unit and integration testing using JUnit and Mockito, improving system reliability. Actively participated in agile teams, contributing to ceremonies, planning and continuous delivery. Engaged in client presentations to demonstrate delivered results and align expectations."
+      "description": "Development of REST APIs using Java and Spring Boot with focus on scalability and performance. Development of frontend interfaces using React and TypeScript. Evolution of legacy systems built with Java 8, JSF, PrimeFaces, and EJB. Participation in modernizing applications toward microservices architecture. Application of unit and integration testing using JUnit and Mockito. Active participation in Scrum ceremonies and Sprint Reviews with the client."
     },
     {
       "company": "Stefanini Brasil",
       "role": "Software Development Intern",
       "period": "Jan 2024 - Oct 2024",
-      "description": "Worked on development and maintenance of legacy systems using Java 8, JSF and PrimeFaces. Contributed to projects using modern technologies such as Spring Boot, React and TypeScript. Developed RESTful APIs and implemented unit tests using JUnit. Used tools like Git and SonarLint for version control and code quality. Participated in agile ceremonies and code reviews. Promoted to Junior Developer after 10 months due to strong performance and contributions."
+      "description": "Development and maintenance of Java 8 applications. Building REST APIs using Spring Boot. Development of React interfaces. Used tools like Git and SonarLint for version control and code quality. Participated in agile ceremonies and code reviews. Promoted to Junior Developer after 10 months due to strong performance and contributions to the projects."
     }
   ]
 }
