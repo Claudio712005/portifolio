@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
-import { MouseTrail } from '@/components/ui/MouseTrail'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/layout/theme-provider'
 import './globals.css'
 
-export const metadata: Metadata = {
-  title: 'Cláudio | Backend Developer',
-  description:
-    'Backend developer focused on Java, Spring Boot and scalable REST APIs. Open to new opportunities.',
-}
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+})
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -15,10 +20,9 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <MouseTrail />
+    <html suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
