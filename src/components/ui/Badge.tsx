@@ -2,18 +2,22 @@ import { clsx } from 'clsx'
 
 interface BadgeProps {
   label: string
-  variant?: 'default' | 'primary'
+  variant?: 'default' | 'accent' | 'outline'
 }
 
+/**
+ * Compact monospaced tag used for technology chips and status labels.
+ *
+ * @example <Badge label="Kotlin" /> · <Badge label="Featured" variant="accent" />
+ */
 export function Badge({ label, variant = 'default' }: BadgeProps) {
   return (
     <span
       className={clsx(
-        'inline-block rounded-full px-3 py-1 text-sm font-medium',
-        variant === 'default' &&
-          'bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300',
-        variant === 'primary' &&
-          'bg-indigo-50 text-indigo-700 dark:bg-indigo-900/60 dark:text-indigo-300',
+        'inline-flex items-center rounded-[3px] border px-2 py-[3px] font-mono text-[11px] leading-4 tracking-tight',
+        variant === 'default' && 'border-line bg-surface-2 text-fg-muted',
+        variant === 'outline' && 'border-line-strong bg-transparent text-fg-muted',
+        variant === 'accent' && 'border-accent/40 bg-accent-soft text-accent',
       )}
     >
       {label}
