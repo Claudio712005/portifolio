@@ -1,6 +1,16 @@
 {
+  "meta": {
+    "title": "Cláudio Araújo — Engenheiro de Software Backend",
+    "description": "Backend Engineer especializado em Java, Kotlin, Spring e Quarkus. APIs reativas, arquitetura hexagonal e modernização de sistemas críticos nos setores bancário e de energia."
+  },
   "nav": {
-    "logo": "<Cláudio />",
+    "logo": "claudio.dev",
+    "primary_nav": "Navegação principal",
+    "skip_to_content": "Pular para o conteúdo",
+    "open_menu": "Abrir menu",
+    "close_menu": "Fechar menu",
+    "theme_toggle": "Alternar tema claro e escuro",
+    "language_select": "Selecionar idioma",
     "about": "Sobre",
     "skills": "Habilidades",
     "projects": "Projetos",
@@ -9,54 +19,109 @@
     "contact": "Contato"
   },
   "hero": {
-    "greeting": "Olá, sou",
-    "cta_projects": "Ver Projetos",
-    "cta_contact": "Entre em Contato",
-    "cta_resume": "Baixar Currículo"
+    "kicker": "Disponível para novos projetos",
+    "cta_projects": "Ver projetos",
+    "cta_contact": "Falar comigo",
+    "cta_resume": "Baixar CV",
+    "stats": [
+      {
+        "label": "Anos em produção",
+        "value": "3+"
+      },
+      {
+        "label": "Setores críticos",
+        "value": "Bancário & Energia"
+      },
+      {
+        "label": "Do legado ao cloud",
+        "value": "Java 8 → 21"
+      }
+    ]
   },
   "about": {
-    "title": "Sobre Mim",
-    "description": "Desenvolvedor backend com experiência prática em Java e Spring Boot, projetando e entregando APIs REST escaláveis e microsserviços. Forte foco em arquitetura limpa, princípios SOLID e boas práticas de segurança. Também atua no frontend com React quando necessário."
+    "kicker": "Sobre",
+    "title": "Sistemas chatos, no melhor sentido da palavra",
+    "paragraphs": [
+      "Trabalho nos dois extremos do ciclo de vida de um software. De um lado, sistemas legados de missão crítica no setor de energia — Java 8, JSF, EJB — onde uma exportação que dá timeout significa relatório regulatório atrasado. Do outro, microsserviços bancários reativos em Java 21 e Kotlin, com WebFlux, Redis e Circuit Breaker segurando o pico de carga. Os dois lados ensinam a mesma lição por caminhos opostos: o que importa é entregar sem derrubar o negócio que já está de pé.",
+      "Gosto de sistema previsível, observável e fácil para a próxima pessoa mexer. Na prática isso é arquitetura hexagonal com o domínio livre de framework, decisão registrada em ADR em vez de na memória de quem escreveu, e teste que roda contra o serviço de verdade com Testcontainers. Hoje curso pós em Arquitetura de Software na FIAP e escrevo bastante Kotlin, Go e — recentemente — infraestrutura de aplicações de IA com MCP e RAG."
+    ],
+    "facts": [
+      {
+        "label": "Base",
+        "value": "São Paulo, Brasil"
+      },
+      {
+        "label": "Foco",
+        "value": "Sistemas distribuídos e programação reativa"
+      },
+      {
+        "label": "Idiomas",
+        "value": "Português nativo · Inglês B1–B2"
+      },
+      {
+        "label": "Formação",
+        "value": "Pós em Arquitetura de Software — FIAP"
+      }
+    ]
   },
   "skills": {
-    "title": "Habilidades",
+    "kicker": "Stack",
+    "title": "Ferramentas que uso em produção",
+    "subtitle": "Agrupadas por camada. Tudo o que está listado aqui já rodou em projeto entregue, não apenas em tutorial.",
     "categories": {
       "backend": "Backend",
-      "frontend": "Frontend",
-      "database": "Banco de Dados",
+      "architecture": "Arquitetura",
+      "database": "Dados",
+      "messaging": "Mensageria",
       "devops": "DevOps",
       "cloud": "Cloud",
-      "messaging": "Mensageria",
-      "architecture": "Arquitetura",
       "testing": "Testes",
-      "ai": "IA"
+      "observability": "Observabilidade",
+      "ai": "IA",
+      "frontend": "Frontend"
     }
   },
   "projects": {
-    "title": "Projetos",
-    "view_code": "Ver Código",
-    "no_repo": "Repositório Privado",
-    "view_more": "Ver Mais",
-    "view_less": "Ver Menos",
-    "read_more": "Ler Mais",
-    "read_less": "Mostrar Menos"
-  },
-  "education": {
-    "title": "Formação Acadêmica"
+    "kicker": "Projetos",
+    "title": "O que eu construí e por quê",
+    "subtitle": "Seleção de projetos autorais. Cada um começou por um problema concreto — a stack veio depois.",
+    "featured_label": "Destaque",
+    "problem_label": "Problema",
+    "stack_label": "Stack",
+    "view_code": "Ver código",
+    "view_live": "Ver ao vivo",
+    "no_repo": "Repositório privado",
+    "more_title": "Outros projetos",
+    "view_more": "Mostrar mais projetos",
+    "view_less": "Mostrar menos",
+    "read_more": "Ler mais",
+    "read_less": "Ler menos"
   },
   "experience": {
-    "title": "Experiência",
-    "present": "Presente",
-    "show_more": "Ver mais",
-    "show_less": "Ver menos"
+    "kicker": "Trajetória",
+    "title": "Experiência profissional",
+    "subtitle": "De estagiário a pleno em pouco mais de dois anos, sempre em sistemas que não podem cair.",
+    "current_label": "Atual",
+    "stack_label": "Stack",
+    "show_more": "Ver detalhes",
+    "show_less": "Ocultar detalhes"
+  },
+  "education": {
+    "kicker": "Formação",
+    "title": "Educação e certificações"
   },
   "contact": {
-    "title": "Entre em Contato",
-    "description": "Aberto a novas oportunidades. Fique à vontade para entrar em contato pelo GitHub ou LinkedIn.",
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "kicker": "Contato",
+    "title": "Vamos conversar sobre o seu backend",
+    "description": "Aberto a oportunidades remotas no Brasil e na Europa, e a conversas técnicas sem compromisso. Respondo por e-mail em até um dia útil.",
+    "email_label": "Enviar e-mail",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn",
+    "resume_label": "Currículo (PDF)",
+    "location_label": "Localização"
   },
   "footer": {
-    "built_with": "Construído com Next.js, TypeScript & Tailwind CSS por Cláudio Araújo em 2026"
+    "built_with": "Construído com Next.js, TypeScript e Tailwind CSS.",
+    "rights": "Todos os direitos reservados."
   }
 }

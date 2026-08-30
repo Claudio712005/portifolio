@@ -1,62 +1,127 @@
 {
+  "meta": {
+    "title": "Cláudio Araújo — Ingeniero de Software Backend",
+    "description": "Backend Engineer especializado en Java, Kotlin, Spring y Quarkus. APIs reactivas, arquitectura hexagonal y modernización de sistemas críticos en banca y energía."
+  },
   "nav": {
-    "logo": "<Cláudio />",
+    "logo": "claudio.dev",
+    "primary_nav": "Navegación principal",
+    "skip_to_content": "Saltar al contenido",
+    "open_menu": "Abrir menú",
+    "close_menu": "Cerrar menú",
+    "theme_toggle": "Cambiar entre tema claro y oscuro",
+    "language_select": "Seleccionar idioma",
     "about": "Sobre mí",
     "skills": "Habilidades",
     "projects": "Proyectos",
     "experience": "Experiencia",
-    "education": "Educación",
+    "education": "Formación",
     "contact": "Contacto"
   },
   "hero": {
-    "greeting": "Hola, soy",
-    "cta_projects": "Ver Proyectos",
-    "cta_contact": "Contáctame",
-    "cta_resume": null
+    "kicker": "Disponible para nuevos proyectos",
+    "cta_projects": "Ver proyectos",
+    "cta_contact": "Hablemos",
+    "cta_resume": "Descargar CV",
+    "stats": [
+      {
+        "label": "Años en producción",
+        "value": "3+"
+      },
+      {
+        "label": "Sectores críticos",
+        "value": "Banca y Energía"
+      },
+      {
+        "label": "Del legado a la nube",
+        "value": "Java 8 → 21"
+      }
+    ]
   },
   "about": {
-    "title": "Sobre mí",
-    "description": "Desarrollador backend con experiencia práctica en Java y Spring Boot, diseñando y entregando APIs REST escalables y microservicios. Fuerte enfoque en arquitectura limpia, principios SOLID y buenas prácticas de seguridad. También contribuye al frontend con React cuando es necesario."
+    "kicker": "Sobre mí",
+    "title": "Sistemas aburridos, en el mejor sentido de la palabra",
+    "paragraphs": [
+      "Trabajo en los dos extremos del ciclo de vida de un software. Por un lado, sistemas legados de misión crítica en el sector energético — Java 8, JSF, EJB — donde una exportación que se cae por timeout significa un informe regulatorio atrasado. Por el otro, microservicios bancarios reactivos en Java 21 y Kotlin, con WebFlux, Redis y Circuit Breaker aguantando los picos de carga. Ambos extremos enseñan la misma lección por caminos opuestos: lo que importa es entregar sin tumbar el negocio que ya está en pie.",
+      "Me gustan los sistemas predecibles, observables y fáciles de tocar para la próxima persona. En la práctica eso es arquitectura hexagonal con el dominio libre de framework, decisiones registradas en ADRs en lugar de en la memoria de quien las tomó, y pruebas que corren contra el servicio real con Testcontainers. Actualmente curso un posgrado en Arquitectura de Software en FIAP y escribo bastante Kotlin, Go y — últimamente — infraestructura de aplicaciones de IA con MCP y RAG."
+    ],
+    "facts": [
+      {
+        "label": "Base",
+        "value": "São Paulo, Brasil"
+      },
+      {
+        "label": "Foco",
+        "value": "Sistemas distribuidos y programación reactiva"
+      },
+      {
+        "label": "Idiomas",
+        "value": "Portugués nativo · Inglés B1–B2"
+      },
+      {
+        "label": "Formación",
+        "value": "Posgrado en Arquitectura de Software — FIAP"
+      }
+    ]
   },
   "skills": {
-    "title": "Habilidades",
+    "kicker": "Stack",
+    "title": "Herramientas que uso en producción",
+    "subtitle": "Agrupadas por capa. Todo lo que está aquí ya corrió en un proyecto entregado, no solo en un tutorial.",
     "categories": {
       "backend": "Backend",
-      "frontend": "Frontend",
-      "database": "Base de Datos",
+      "architecture": "Arquitectura",
+      "database": "Datos",
+      "messaging": "Mensajería",
       "devops": "DevOps",
       "cloud": "Cloud",
-      "messaging": "Mensajería",
-      "architecture": "Arquitectura",
-      "testing": "Testing",
-      "ai": "IA"
+      "testing": "Pruebas",
+      "observability": "Observabilidad",
+      "ai": "IA",
+      "frontend": "Frontend"
     }
   },
   "projects": {
-    "title": "Proyectos",
-    "view_code": "Ver Código",
-    "no_repo": "Repositorio Privado",
-    "view_more": "Ver Más",
-    "view_less": "Ver Menos",
-    "read_more": "Leer Más",
-    "read_less": "Mostrar Menos"
-  },
-  "education": {
-    "title": "Educación"
+    "kicker": "Proyectos",
+    "title": "Lo que construí y por qué",
+    "subtitle": "Selección de proyectos propios. Cada uno empezó por un problema concreto — el stack vino después.",
+    "featured_label": "Destacado",
+    "problem_label": "Problema",
+    "stack_label": "Stack",
+    "view_code": "Ver código",
+    "view_live": "Ver en vivo",
+    "no_repo": "Repositorio privado",
+    "more_title": "Otros proyectos",
+    "view_more": "Mostrar más proyectos",
+    "view_less": "Mostrar menos",
+    "read_more": "Leer más",
+    "read_less": "Leer menos"
   },
   "experience": {
-    "title": "Experiencia",
-    "present": "Presente",
-    "show_more": "Ver más",
-    "show_less": "Ver menos"
+    "kicker": "Trayectoria",
+    "title": "Experiencia profesional",
+    "subtitle": "De practicante a semi senior en poco más de dos años, siempre en sistemas que no pueden caerse.",
+    "current_label": "Actual",
+    "stack_label": "Stack",
+    "show_more": "Ver detalles",
+    "show_less": "Ocultar detalles"
+  },
+  "education": {
+    "kicker": "Formación",
+    "title": "Educación y certificaciones"
   },
   "contact": {
-    "title": "Contacto",
-    "description": "Abierto a nuevas oportunidades. No dudes en contactarme vía GitHub o LinkedIn.",
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "kicker": "Contacto",
+    "title": "Hablemos de tu backend",
+    "description": "Abierto a oportunidades remotas en Brasil y Europa, y a conversaciones técnicas sin compromiso. Respondo por correo en un día hábil.",
+    "email_label": "Enviar correo",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn",
+    "resume_label": "Currículum (PDF)",
+    "location_label": "Ubicación"
   },
   "footer": {
-    "built_with": "Construido con Next.js, TypeScript & Tailwind CSS por Cláudio Araújo en 2026"
+    "built_with": "Construido con Next.js, TypeScript y Tailwind CSS.",
+    "rights": "Todos los derechos reservados."
   }
 }
