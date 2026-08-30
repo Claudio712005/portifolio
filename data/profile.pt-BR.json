@@ -1,15 +1,19 @@
 {
   "basics": {
-    "name": "Cláudio da Silva Araújo Filho",
-    "title": "Desenvolvedor Backend Pleno @ Avanade",
-    "summary": "Desenvolvedor Back-end Pleno especializado em Java, Kotlin e Spring Boot, com experiência no desenvolvimento e modernização de aplicações corporativas para os setores bancário e de energia. Atuo na construção de APIs REST, microsserviços e integrações utilizando Java 21, Spring WebFlux, Docker, OpenShift, Oracle e PostgreSQL. Experiência na evolução de sistemas legados Java 8, migração para arquiteturas de microsserviços, otimização de performance, processamento concorrente e resolução de incidentes em produção. Aplico Clean Architecture, Arquitetura Hexagonal, DDD e testes automatizados para construir soluções escaláveis e de fácil manutenção.",
+    "name": "Cláudio Araújo",
+    "role": "Engenheiro de Software Backend",
+    "title": "Backend Engineer Pleno @ Avanade",
+    "valueProp": "Levo sistemas críticos do legado ao cloud-native sem parar o negócio que depende deles — APIs reativas em Java e Kotlin, arquitetura hexagonal e resiliência medida em produção, não em slide.",
+    "summary": "Backend Engineer com 3+ anos em sistemas críticos dos setores bancário e de energia. Java 8–21, Kotlin, Spring Boot e Quarkus, com foco em APIs reativas, microsserviços, arquitetura hexagonal e modernização de legado.",
     "location": "São Paulo, Brasil",
+    "availability": "Aberto a oportunidades remotas — Brasil e Europa",
+    "email": "clausilvaaraujo11@gmail.com",
     "github": "https://github.com/Claudio712005",
-    "linkedin": "https://www.linkedin.com/in/claudiodesenvolvedorjava/"
+    "linkedin": "https://www.linkedin.com/in/claudio-araujo-dev/"
   },
   "skills": [
     {
-      "name": "Java",
+      "name": "Java 8–21",
       "category": "backend"
     },
     {
@@ -29,6 +33,14 @@
       "category": "backend"
     },
     {
+      "name": "Project Reactor",
+      "category": "backend"
+    },
+    {
+      "name": "Quarkus",
+      "category": "backend"
+    },
+    {
       "name": "Spring Security",
       "category": "backend"
     },
@@ -41,15 +53,7 @@
       "category": "backend"
     },
     {
-      "name": "Node.js",
-      "category": "backend"
-    },
-    {
-      "name": "Gin",
-      "category": "backend"
-    },
-    {
-      "name": "EJB",
+      "name": "Jakarta EE / EJB",
       "category": "backend"
     },
     {
@@ -57,103 +61,11 @@
       "category": "backend"
     },
     {
-      "name": "React",
-      "category": "frontend"
+      "name": "Node.js",
+      "category": "backend"
     },
     {
-      "name": "Angular",
-      "category": "frontend"
-    },
-    {
-      "name": "Next.js",
-      "category": "frontend"
-    },
-    {
-      "name": "TypeScript",
-      "category": "frontend"
-    },
-    {
-      "name": "JavaScript",
-      "category": "frontend"
-    },
-    {
-      "name": "JSF",
-      "category": "frontend"
-    },
-    {
-      "name": "PrimeFaces",
-      "category": "frontend"
-    },
-    {
-      "name": "Tailwind CSS",
-      "category": "frontend"
-    },
-    {
-      "name": "PostgreSQL",
-      "category": "database"
-    },
-    {
-      "name": "MySQL",
-      "category": "database"
-    },
-    {
-      "name": "OracleDB",
-      "category": "database"
-    },
-    {
-      "name": "SQL Server",
-      "category": "database"
-    },
-    {
-      "name": "Kafka",
-      "category": "messaging"
-    },
-    {
-      "name": "RabbitMQ",
-      "category": "messaging"
-    },
-    {
-      "name": "Docker",
-      "category": "devops"
-    },
-    {
-      "name": "Docker Compose",
-      "category": "devops"
-    },
-    {
-      "name": "GitHub Actions",
-      "category": "devops"
-    },
-    {
-      "name": "GitLab CI/CD",
-      "category": "devops"
-    },
-    {
-      "name": "OpenShift",
-      "category": "devops"
-    },
-    {
-      "name": "ArgoCD",
-      "category": "devops"
-    },
-    {
-      "name": "Kubernetes",
-      "category": "devops"
-    },
-    {
-      "name": "Terraform",
-      "category": "devops"
-    },
-    {
-      "name": "AWS",
-      "category": "cloud"
-    },
-    {
-      "name": "Azure",
-      "category": "cloud"
-    },
-    {
-      "name": "DDD",
+      "name": "Arquitetura Hexagonal",
       "category": "architecture"
     },
     {
@@ -161,11 +73,7 @@
       "category": "architecture"
     },
     {
-      "name": "Design Patterns",
-      "category": "architecture"
-    },
-    {
-      "name": "Arquitetura Hexagonal",
+      "name": "DDD",
       "category": "architecture"
     },
     {
@@ -177,11 +85,107 @@
       "category": "architecture"
     },
     {
+      "name": "Monólito Modular",
+      "category": "architecture"
+    },
+    {
+      "name": "Orientado a Eventos",
+      "category": "architecture"
+    },
+    {
+      "name": "Programação Reativa",
+      "category": "architecture"
+    },
+    {
+      "name": "Design Patterns",
+      "category": "architecture"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "database"
+    },
+    {
+      "name": "Oracle",
+      "category": "database"
+    },
+    {
+      "name": "MySQL",
+      "category": "database"
+    },
+    {
+      "name": "SQL Server",
+      "category": "database"
+    },
+    {
+      "name": "Redis",
+      "category": "database"
+    },
+    {
+      "name": "Flyway",
+      "category": "database"
+    },
+    {
+      "name": "Apache Kafka",
+      "category": "messaging"
+    },
+    {
+      "name": "RabbitMQ",
+      "category": "messaging"
+    },
+    {
+      "name": "Docker",
+      "category": "devops"
+    },
+    {
+      "name": "Kubernetes",
+      "category": "devops"
+    },
+    {
+      "name": "OpenShift",
+      "category": "devops"
+    },
+    {
+      "name": "ArgoCD",
+      "category": "devops"
+    },
+    {
+      "name": "Terraform",
+      "category": "devops"
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "devops"
+    },
+    {
+      "name": "GitLab CI/CD",
+      "category": "devops"
+    },
+    {
+      "name": "GitOps",
+      "category": "devops"
+    },
+    {
+      "name": "AWS",
+      "category": "cloud"
+    },
+    {
+      "name": "Azure",
+      "category": "cloud"
+    },
+    {
+      "name": "AWS Lambda",
+      "category": "cloud"
+    },
+    {
+      "name": "Amazon EKS",
+      "category": "cloud"
+    },
+    {
       "name": "TDD",
       "category": "testing"
     },
     {
-      "name": "JUnit",
+      "name": "JUnit 5",
       "category": "testing"
     },
     {
@@ -190,6 +194,14 @@
     },
     {
       "name": "MockK",
+      "category": "testing"
+    },
+    {
+      "name": "Testcontainers",
+      "category": "testing"
+    },
+    {
+      "name": "WireMock",
       "category": "testing"
     },
     {
@@ -205,11 +217,23 @@
       "category": "observability"
     },
     {
-      "name": "Git Hub Copilot",
+      "name": "Datadog",
+      "category": "observability"
+    },
+    {
+      "name": "Micrometer",
+      "category": "observability"
+    },
+    {
+      "name": "MCP",
       "category": "ai"
     },
     {
-      "name": "Claude Code",
+      "name": "RAG / pgvector",
+      "category": "ai"
+    },
+    {
+      "name": "Agentes de IA",
       "category": "ai"
     },
     {
@@ -217,284 +241,432 @@
       "category": "ai"
     },
     {
-      "name": "Agentes de IA",
+      "name": "GitHub Copilot",
       "category": "ai"
+    },
+    {
+      "name": "Claude Code",
+      "category": "ai"
+    },
+    {
+      "name": "Angular",
+      "category": "frontend"
+    },
+    {
+      "name": "React",
+      "category": "frontend"
+    },
+    {
+      "name": "Next.js",
+      "category": "frontend"
+    },
+    {
+      "name": "TypeScript",
+      "category": "frontend"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "frontend"
+    },
+    {
+      "name": "JSF / PrimeFaces",
+      "category": "frontend"
+    },
+    {
+      "name": "Jetpack Compose",
+      "category": "frontend"
     }
   ],
   "projects": [
     {
-      "name": "HSG HIS Web App",
-      "description": "Plataforma WEB para gerenciamento de informações hospitalares.",
+      "name": "MCP Regression Platform",
+      "tagline": "Plataforma de regression readiness com MCP, RAG e agente determinístico",
+      "problem": "Antes de cada regressão de um BFF, alguém precisa checar na mão se as dependências estão de pé, se os contratos ainda batem e se o ambiente aguenta a bateria de testes. Isso consome horas e falha em silêncio.",
+      "description": "Responde a uma única pergunta operacional — o ambiente está pronto para regredir este BFF? — combinando descoberta de dependências, health check, validação de contrato e smoke tests. Expõe 7 Tools, 6 Resources e 4 Prompts via MCP (Streamable HTTP e STDIO), com o LLM restrito à interpretação e o workflow mantido determinístico. Monólito modular hexagonal, com autorização por capability em cada Tool e Resource e mitigação de prompt injection na fronteira MCP.",
       "techs": [
-        "Java",
-        "Flyway",
-        "H2 Database",
-        "Maven",
-        "JUnit",
-        "Mockito",
-        "JSF",
-        "PrimeFaces",
-        "JBOSS",
-        "MailHog",
-        "Docker",
-        "Keycloak",
-        "EJB",
-        "JPA",
-        "Hibernate",
-        "MinIO",
-        "Monolito"
+        "Kotlin",
+        "Spring Boot",
+        "MCP",
+        "RAG",
+        "pgvector",
+        "OAuth2 / JWT",
+        "Arquitetura Hexagonal",
+        "Testcontainers",
+        "WireMock",
+        "Docker"
       ],
-      "repoUrl": "https://github.com/Claudio712005/hsg-his-web-app",
-      "stars": null
+      "year": "2026",
+      "accent": "signal",
+      "featured": true,
+      "repoUrl": "https://github.com/Claudio712005/mcp-regression-platform",
+      "liveUrl": null
     },
     {
-      "name": "mock-smith",
-      "description": "Engine de mock de APIs em runtime guiado por OpenAPI/Swagger — sobe um servidor HTTP direto do contrato, com profiles de caos e pipeline de interceptors.",
+      "name": "ServiceTrack Platform",
+      "tagline": "Sistema distribuído de ordens de serviço em quatro repositórios com donos claros",
+      "problem": "Oficinas mecânicas perdem o rastro de cada atendimento entre papel, planilha e WhatsApp — e o cliente descobre o orçamento só quando o carro já está desmontado.",
+      "description": "Controla o ciclo completo de uma ordem de serviço — abertura, diagnóstico, orçamento, aprovação do cliente por magic link, execução e entrega — com auditoria das operações de negócio. A separação é deliberada: a API é dona do domínio e das migrations, a autenticação por CPF vive em uma AWS Lambda, o RDS tem repositório próprio com orçamento de conexões, e rede, EKS, API Gateway e ArgoCD ficam no repositório de IaC. Decisões registradas em 25 ADRs e 8 RFCs.",
+      "techs": [
+        "Kotlin",
+        "Quarkus",
+        "PostgreSQL",
+        "AWS Lambda",
+        "Amazon EKS",
+        "Terraform",
+        "API Gateway",
+        "ArgoCD",
+        "Datadog",
+        "Flyway"
+      ],
+      "year": "2026",
+      "accent": "depth",
+      "featured": true,
+      "repoUrl": "https://github.com/Claudio712005/service-track-api",
+      "liveUrl": null
+    },
+    {
+      "name": "MockSmith",
+      "tagline": "Engine de mock de APIs em runtime, guiado direto pelo contrato OpenAPI",
+      "problem": "Times ficam bloqueados esperando o serviço do qual dependem — e, quando ele existe, ninguém consegue testar como a própria aplicação reage quando ele cai, demora ou devolve JSON quebrado.",
+      "description": "Lê um documento OpenAPI 3 ou Swagger e sobe um servidor HTTP ao vivo direto do contrato, sem arquivo de mock estático e sem configuração. Gera corpo de resposta por prioridade — exemplo do contrato, exemplo do schema, dado falso conforme o formato. Profiles de caos sorteiam por peso sucesso, erro de negócio, 500, timeout, JSON malformado e queda de conexão, e a Admin API sobrescreve status e latência por endpoint sem reiniciar. Versão interna da ferramenta economiza cerca de 12 h/semana por equipe.",
       "techs": [
         "Go",
-        "OpenAPI",
+        "OpenAPI 3",
         "Swagger",
         "Chi",
         "Cobra",
         "gofakeit",
         "CLI",
-        "YAML",
-        "CI"
+        "GitHub Actions"
       ],
+      "year": "2026",
+      "accent": "copper",
+      "featured": true,
       "repoUrl": "https://github.com/Claudio712005/mock-smith",
-      "stars": null
+      "liveUrl": null
     },
     {
-      "name": "sellvia-api",
-      "description": "API REST backend para gerenciamento de catalogos e produtos, desenvolvida com Kotlin e Spring Boot. O sistema contempla autenticacao, administracao de empresas, gerenciamento de produtos e categorias, e armazenamento de ativos digitais via Cloudflare R2.",
+      "name": "Sellvia API",
+      "tagline": "API de catálogo multiempresa com armazenamento de mídia em object storage",
+      "problem": "Pequenos comerciantes que vendem por catálogo não têm onde centralizar produto, categoria e foto — e acabam mantendo o estoque no álbum do celular.",
+      "description": "Backend REST em Kotlin e Spring Boot para catálogo multiempresa: autenticação, administração de empresas, produtos, categorias e upload de mídia em Cloudflare R2 via SDK S3. Domínio isolado por arquitetura hexagonal, portas e adaptadores explícitos, migrations com Flyway e suíte de testes com JUnit e MockK. Serve o app Android da mesma plataforma.",
       "techs": [
         "Kotlin",
         "Spring Boot",
-        "S3 SDK",
-        "Cloudflare R2",
-        "Docker",
         "PostgreSQL",
-        "JUnit",
-        "MockK",
-        "Clean Architecture",
+        "Cloudflare R2",
+        "S3 SDK",
         "Arquitetura Hexagonal",
-        "Flyway"
+        "Clean Architecture",
+        "MockK",
+        "Flyway",
+        "Docker"
       ],
+      "year": "2026",
+      "accent": "moss",
+      "featured": true,
       "repoUrl": "https://github.com/Claudio712005/sellvia-api",
-      "stars": null
+      "liveUrl": null
     },
     {
-      "name": "sellvia-android",
-      "description": "O Sellvia Android é o app da plataforma Sellvia, voltado para gestão de produtos, categorias, catálogo e informações de empresa. O aplicativo consome uma API REST e segue os princípios de Clean Architecture com o padrão MVVM.",
+      "name": "HSG Hospital Information System",
+      "tagline": "Sistema de gestão hospitalar em Java EE, monólito modular empacotado em EAR",
+      "problem": "Prontuário, agenda e documento clínico costumam viver em sistemas separados que não conversam — e a informação do paciente chega incompleta na hora do atendimento.",
+      "description": "HIS construído sobre Java EE com JSF, EJB e JPA, empacotado como EAR e implantado no WildFly. Autenticação e autorização delegadas ao Keycloak, documentos clínicos em object storage com MinIO, schema versionado com Flyway e ambiente completo em Docker Compose. A modularidade é interna: cada domínio é um módulo com fronteira própria dentro do monólito, o que mantém o deploy simples sem virar código emaranhado.",
+      "techs": [
+        "Java",
+        "Jakarta EE / EJB",
+        "JSF / PrimeFaces",
+        "JPA",
+        "Hibernate",
+        "WildFly",
+        "Keycloak",
+        "MinIO",
+        "Flyway",
+        "Monólito Modular",
+        "Docker"
+      ],
+      "year": "2026",
+      "accent": "graphite",
+      "featured": true,
+      "repoUrl": "https://github.com/Claudio712005/hsg-his-web-app",
+      "liveUrl": null
+    },
+    {
+      "name": "ServiceTrack AWS IaC",
+      "tagline": "IaC do ServiceTrack: rede, EKS, API Gateway e GitOps em dois ambientes isolados",
+      "problem": "Subir um ambiente na mão erra a ordem e derruba o outro ambiente junto.",
+      "description": "Terraform modular com homologação e produção separadas por state e sizing próprios. Provisiona VPC, EKS, ECR, ArgoCD, a Lambda de autenticação e a exposição externa por API Gateway a partir de um contrato OpenAPI versionado. Workflows orquestram a ordem rede → banco → stack, e a destruição na ordem inversa.",
+      "techs": [
+        "Terraform",
+        "Amazon EKS",
+        "API Gateway",
+        "AWS Lambda",
+        "ArgoCD",
+        "Datadog",
+        "GitHub Actions"
+      ],
+      "year": "2026",
+      "accent": "depth",
+      "featured": false,
+      "repoUrl": "https://github.com/Claudio712005/service-track-aws-iac",
+      "liveUrl": null
+    },
+    {
+      "name": "ServiceTrack Auth Lambda",
+      "tagline": "Autenticação serverless por CPF com emissão de JWT RS256",
+      "problem": "Manter login dentro da API principal amarra o ciclo de vida da autenticação ao deploy do domínio.",
+      "description": "Serviço Quarkus + Kotlin empacotado como AWS Lambda que valida CPF e senha, verifica o usuário e emite tokens JWT assinados em RS256. Domínio sem dependência de framework, com value objects para CPF, e-mail e senha, e ports de entrada e saída explícitos.",
+      "techs": [
+        "Kotlin",
+        "Quarkus",
+        "AWS Lambda",
+        "SmallRye JWT",
+        "PostgreSQL",
+        "Arquitetura Hexagonal"
+      ],
+      "year": "2026",
+      "accent": "signal",
+      "featured": false,
+      "repoUrl": "https://github.com/Claudio712005/service-track-lambda",
+      "liveUrl": null
+    },
+    {
+      "name": "Go Event-Driven Microservices",
+      "tagline": "Monorepo de microsserviços em Go com barramento de eventos RabbitMQ",
+      "problem": "Cadastro síncrono acopla serviços: se o serviço de notificação cai, o cadastro cai junto.",
+      "description": "Arquitetura orientada a eventos com auth-service, notification-service e user-worker comunicando-se por RabbitMQ. Cada serviço publica e consome eventos sem conhecer o outro, o que permite escalar e falhar de forma independente. Testes com gomock e ambiente completo em Docker Compose.",
+      "techs": [
+        "Go",
+        "Gin",
+        "RabbitMQ",
+        "MySQL",
+        "Orientado a Eventos",
+        "gomock",
+        "Docker"
+      ],
+      "year": "2025",
+      "accent": "moss",
+      "featured": false,
+      "repoUrl": "https://github.com/Claudio712005/go-microservices-architecture",
+      "liveUrl": null
+    },
+    {
+      "name": "Sellvia Android",
+      "tagline": "App Android do Sellvia para gestão de catálogo em campo",
+      "problem": "Quem vende na rua precisa cadastrar produto e conferir preço sem abrir um notebook.",
+      "description": "Cliente Android em Jetpack Compose consumindo a API REST do Sellvia. Clean Architecture com MVVM, injeção de dependência com Koin, navegação em Navigation Compose e carregamento de imagens com Coil. Cobre produtos, categorias, catálogo e dados da empresa.",
       "techs": [
         "Kotlin",
         "Jetpack Compose",
         "MVVM",
         "Koin",
-        "Navigation Compose",
         "Retrofit",
         "Coil",
-        "Android"
+        "Clean Architecture"
       ],
+      "year": "2026",
+      "accent": "graphite",
+      "featured": false,
       "repoUrl": "https://github.com/Claudio712005/sellvia-android",
-      "stars": null
+      "liveUrl": null
     },
     {
-      "name": "Portifolio Pessoal",
-      "description": "Site de portfólio pessoal moderno, responsivo e multilíngue — construído com Next.js 14, TypeScript e Tailwind CSS. Aplicação de página única (SPA) com roteamento por localidade, animações fluidas e fundos 3D interativos. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.",
+      "name": "EventNtfy API",
+      "tagline": "API de notificações por e-mail e SMS com rotinas agendadas",
+      "problem": "Cada aplicação reimplementa o próprio envio de e-mail e SMS, com credencial espalhada em cinco repositórios.",
+      "description": "Serviço único de notificação com Spring Boot: e-mail via Spring Mail e SMS via Twilio, com rotinas agendadas para disparos recorrentes. Pipeline de CI/CD em GitHub Actions, empacotamento em Docker e persistência em MySQL.",
+      "techs": [
+        "Java",
+        "Spring Boot",
+        "Twilio",
+        "MySQL",
+        "GitHub Actions",
+        "AWS",
+        "JUnit",
+        "Docker"
+      ],
+      "year": "2025",
+      "accent": "copper",
+      "featured": false,
+      "repoUrl": "https://github.com/Claudio712005/EventNtfyApi",
+      "liveUrl": null
+    },
+    {
+      "name": "LibraryControl",
+      "tagline": "API REST em Java puro, sem framework, por exercício de fundamentos",
+      "problem": "Framework esconde o que realmente acontece entre a requisição HTTP e o registro no banco.",
+      "description": "Sistema de empréstimo de livros escrito sem Spring e com o mínimo de bibliotecas: servidor HTTP, roteamento manual, DAO genérico com reflection e autenticação por JWT implementados na mão. O objetivo foi entender cada camada que o framework normalmente abstrai.",
+      "techs": [
+        "Java",
+        "MySQL",
+        "JWT",
+        "Reflection",
+        "Design Patterns"
+      ],
+      "year": "2025",
+      "accent": "graphite",
+      "featured": false,
+      "repoUrl": "https://github.com/Claudio712005/LibraryControl",
+      "liveUrl": null
+    },
+    {
+      "name": "Personal Portfolio",
+      "tagline": "Este site: portfólio estático trilíngue em Next.js 14",
+      "problem": "Um portfólio que depende de CMS ou API externa quebra justamente quando um recrutador abre o link.",
+      "description": "App Router com roteamento por locale, tema claro e escuro sem flash e conteúdo carregado de arquivos JSON tipados versionados junto ao código — sem nenhuma chamada externa. Exportado como site estático e publicado no GitHub Pages por GitHub Actions.",
       "techs": [
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
         "React",
-        "JavaScript",
-        "SPA",
         "i18n",
         "Framer Motion",
-        "Three.js",
-        "AI Agents",
-        "Prompt Engineering",
-        "Prompt Versioning for LLMs"
+        "GitHub Actions"
       ],
+      "year": "2026",
+      "accent": "signal",
+      "featured": false,
       "repoUrl": "https://github.com/Claudio712005/portifolio",
-      "stars": null
+      "liveUrl": "https://claudio712005.github.io/portifolio/pt-BR"
     },
     {
-      "name": "EventSync API",
-      "description": "Este projeto consiste em uma API de notificações que envia mensagens tanto por e-mail (utilizando Spring Boot Starter Mail) quanto por SMS (utilizando a API da Twilio).",
-      "techs": [
-        "Java",
-        "Docker",
-        "MySQL",
-        "Spring Boot",
-        "CI/CD",
-        "JUnit",
-        "AWS",
-        "Email",
-        "SMS"
-      ],
-      "repoUrl": "https://github.com/Claudio712005/EventNtfyApi",
-      "stars": null
-    },
-    {
-      "name": "go-microservices-architecture",
-      "description": "Este repositório é um monorepo contendo uma arquitetura de microsserviços desenvolvida em Go, utilizando uma abordagem orientada a eventos (EDA) com RabbitMQ como barramento de eventos. O projeto simula um sistema desacoplado de cadastro de usuários, onde diferentes serviços se comunicam por meio de eventos, permitindo escalabilidade, flexibilidade e independência entre os componentes.",
-      "techs": [
-        "Go",
-        "Gin",
-        "Docker",
-        "MySQL",
-        "RabbitMQ",
-        "Message Queue",
-        "gomock",
-        "EDA"
-      ],
-      "repoUrl": "https://github.com/Claudio712005/go-microservices-architecture",
-      "stars": null
-    },
-    {
-      "name": "go-task-api",
-      "description": "API backend para gerenciamento de tarefas desenvolvida em Go. O projeto utiliza hash seguro para senhas, autenticação via token JWT e documentação da API com Swagger.",
-      "techs": [
-        "Go",
-        "Gin",
-        "GORM",
-        "MySQL",
-        "JWT",
-        "Swagger"
-      ],
-      "repoUrl": "https://github.com/Claudio712005/go-task-api",
-      "stars": null
-    },
-    {
-      "name": "LibraryControl",
-      "description": "LibraryControl é uma API REST para gerenciamento de empréstimos de livros, criada como um desafio pessoal. O objetivo foi ir além do convencional: desenvolver tudo sem frameworks, utilizando Java puro, com o mínimo de bibliotecas possível. A ideia foi explorar o que acontece \"por trás dos bastidores\" nas aplicações Java — entendendo como cada parte funciona, desde a criação de rotas até autenticação e persistência de dados, sem depender da abstração dos frameworks.",
-      "techs": [
-        "Java",
-        "MySQL",
-        "JWT"
-      ],
-      "repoUrl": "https://github.com/Claudio712005/LibraryControl",
-      "stars": null
-    },
-    {
-      "name": "To-do-List",
-      "description": "Este é um projeto de lista de tarefas desenvolvido como parte do meu processo de aprendizado, com o objetivo de ir além de implementações comuns. Em vez de me limitar a HTML, CSS e JavaScript, explorei a criação de uma aplicação mais robusta com frontend em React e backend em Java utilizando Spring Boot.",
-      "techs": [
-        "Java",
-        "MySQL",
-        "JWT",
-        "React",
-        "Spring Boot",
-        "JavaScript",
-        "Sass"
-      ],
-      "repoUrl": "https://github.com/Claudio712005/To-do-List",
-      "stars": null
-    },
-    {
-      "name": "TCAteliê E-commerce Platform",
-      "description": "Plataforma de e-commerce full-stack desenvolvida para um cliente real (TCAteliê), com foco na expansão da presença digital e aumento de vendas. A solução inclui uma loja virtual e um painel administrativo disponível tanto para web quanto para Android, permitindo uma gestão eficiente do negócio. A infraestrutura evoluiu de Azure para AWS, aplicando práticas modernas de arquitetura em nuvem e infraestrutura como código.",
+      "name": "TCAteliê E-commerce",
+      "tagline": "E-commerce full-stack entregue para um cliente real, com painel web e Android",
+      "problem": "Um ateliê que vendia só por encomenda presencial não tinha canal digital nem controle de pedido.",
+      "description": "Loja virtual, painel administrativo web e app Android sobre um backend Spring Boot com Spring Security e JWT. A infraestrutura migrou de Azure para AWS ao longo do projeto, com provisionamento em Terraform e NGINX como proxy reverso.",
       "techs": [
         "Java",
         "Spring Boot",
         "Spring Security",
-        "JWT",
-        "JPA",
-        "MapStruct",
         "React",
-        "Redux",
-        "Tailwind CSS",
         "Kotlin",
         "Jetpack Compose",
         "MySQL",
-        "Azure",
-        "AWS",
         "Terraform",
-        "NGINX",
-        "Docker"
+        "AWS",
+        "NGINX"
       ],
+      "year": "2025",
+      "accent": "moss",
+      "featured": false,
       "repoUrl": "https://github.com/orgs/grupo-04-3adsb/repositories",
-      "stars": null
-    },
-    {
-      "name": "VisualOps - Hardware Monitoring",
-      "description": "Sistema de monitoramento de hardware desenvolvido para empresas de design gráfico, permitindo o acompanhamento em tempo real de CPU, memória, disco e GPU. A solução inclui dashboards interativos, alertas via Slack e armazenamento de dados históricos para análise. O projeto aplicou conceitos de ITIL e focou em observabilidade, confiabilidade do sistema e detecção proativa de problemas.",
-      "techs": [
-        "Java",
-        "Node.js",
-        "MySQL",
-        "SQL Server",
-        "Docker",
-        "AWS EC2",
-        "Slack API",
-        "Firebase",
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "repoUrl": "https://www.linkedin.com/posts/claudiodesenvolvedorjava_compartilho-com-entusiasmo-o-resultado-do-activity-7207459243183026179-b5FV",
-      "stars": null
-    },
-    {
-      "name": "IoT Monitoring & Web Platform",
-      "description": "Projeto acadêmico focado na integração entre sistemas web e dispositivos IoT, desenvolvido utilizando metodologia Scrum e entregue em três sprints. A solução inclui dashboard com visualização de dados, sistema de autenticação, modelagem de banco de dados e integração completa entre sensores Arduino e serviços backend, permitindo coleta e análise de dados em tempo real.",
-      "techs": [
-        "Java",
-        "Node.js",
-        "MySQL",
-        "Arduino",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Chart.js",
-        "Scrum"
-      ],
-      "repoUrl": "https://github.com/TermoTech/sprint3",
-      "stars": null
-    }
-  ],
-  "education": [
-    {
-      "institution": "Anhanguera",
-      "degree": "Bacharelado em Engenharia de Software",
-      "period": "Fev 2026 – Dez 2029"
-    },
-    {
-      "institution": "FIAP",
-      "degree": "Pós-Graduação em Arquitetura de Software",
-      "period": "Fev 2026 – Dez 2026"
-    },
-    {
-      "institution": "SPTech School",
-      "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-      "period": "Ago 2023 – Jun 2025"
+      "liveUrl": null
     }
   ],
   "experience": [
     {
       "company": "Avanade",
-      "role": "Analista | Desenvolvedor Back-end Pleno",
-      "period": "Abr 2026 - Presente",
-      "description": "Desenvolvimento de microsserviços e BFFs utilizando Java 21 e Spring Boot para o setor bancário. Implementação de APIs reativas com Spring WebFlux e Project Reactor. Aplicação de Arquitetura Hexagonal, DDD e Clean Architecture na construção de novas funcionalidades. Implementação de padrões de resiliência com Resilience4j (Retry e Circuit Breaker). Desenvolvimento de ferramenta interna em Go para geração automática de mocks HTTP a partir de contratos OpenAPI, reduzindo dependências entre equipes. Participação na evolução de aplicações integradas ao Mainframe. Gerenciamento de ambientes GitOps com ArgoCD. Desenvolvimento de componentes Angular para aplicações FED usando WebViews."
+      "role": "Analista Desenvolvedor Back-end Pleno",
+      "period": "Abr 2026 — Presente",
+      "summary": "Microsserviços e BFFs reativos para sistemas bancários críticos, em consultoria multinacional parceira Microsoft.",
+      "highlights": [
+        "Arquitetei e entreguei microsserviços e BFFs em Java 21 e Spring Boot, com APIs reativas em Spring WebFlux e Project Reactor.",
+        "Implementei resiliência com Resilience4j — retry com backoff exponencial e Circuit Breaker — reduzindo a latência em pico de carga e a propagação de falha entre serviços.",
+        "Coloquei cache Redis reativo no BFF e nos microsserviços com comandos avançados (JSON.SET, SEARCH), cortando chamadas redundantes.",
+        "Desenvolvi ferramenta interna em Go que gera mocks HTTP a partir de contratos OpenAPI, desacoplando três times e economizando cerca de 12 h/semana por equipe.",
+        "Apliquei Arquitetura Hexagonal, DDD e Clean Architecture nas novas funcionalidades, e gerenciei ambientes GitOps com ArgoCD."
+      ],
+      "stack": [
+        "Java 21",
+        "Kotlin",
+        "Spring WebFlux",
+        "Project Reactor",
+        "Resilience4j",
+        "Redis",
+        "Kubernetes",
+        "OpenShift",
+        "ArgoCD",
+        "Angular"
+      ],
+      "current": true
     },
     {
       "company": "Stefanini Brasil",
       "role": "Analista Desenvolvedor Pleno",
-      "period": "Dez 2025 - Abr 2026",
-      "description": "Desenvolvimento e evolução de aplicações Java de missão crítica para um dos maiores clientes do setor de energia, garantindo estabilidade e continuidade dos serviços. Sustentação de sistemas legados em Java 8, JSF e PrimeFaces. Implementação de processamento paralelo para exportação de grandes volumes de dados, eliminando timeouts e permitindo processamento de históricos superiores a seis anos. Administração de ambientes Red Hat OpenShift, apoiando deploys e troubleshooting. Atuação como referência técnica na equipe, auxiliando na análise de impacto e resolução de problemas em sistemas distribuídos. Investigação e resolução de incidentes em produção."
+      "period": "Dez 2025 — Abr 2026",
+      "summary": "Aplicações Java de missão crítica para um dos maiores clientes do setor de energia.",
+      "highlights": [
+        "Implementei processamento paralelo na exportação de grandes volumes: relatórios que falhavam já com 1 ano de histórico passaram a exportar 6+ anos sem indisponibilidade.",
+        "Investiguei e resolvi incidentes em produção em sistemas de missão crítica, reduzindo o MTTR de recuperação.",
+        "Administrei ambientes Red Hat OpenShift — provisionamento, escalonamento e análise de logs.",
+        "Atuei como referência técnica na análise de impacto e no entendimento sistêmico do legado em Java 8, JSF e PrimeFaces."
+      ],
+      "stack": [
+        "Java 8",
+        "Spring Boot",
+        "Spring Data JPA",
+        "Hibernate",
+        "Oracle",
+        "PostgreSQL",
+        "JSF",
+        "PrimeFaces",
+        "OpenShift",
+        "Docker"
+      ],
+      "current": false
     },
     {
       "company": "Stefanini Brasil",
       "role": "Analista Desenvolvedor Júnior",
-      "period": "Out 2024 - Dez 2025",
-      "description": "Desenvolvimento de APIs REST utilizando Java e Spring Boot, com foco em escalabilidade e desempenho. Desenvolvimento de interfaces frontend com React e TypeScript. Evolução de sistemas legados Java 8, JSF, PrimeFaces e EJB. Participação na modernização de aplicações para arquitetura de microsserviços. Aplicação de testes unitários e de integração utilizando JUnit e Mockito. Participação ativa em cerimônias Scrum e Sprint Reviews junto ao cliente."
+      "period": "Out 2024 — Dez 2025",
+      "summary": "APIs REST de ingestão de dados do setor de energia e modernização de legado para microsserviços.",
+      "highlights": [
+        "Desenvolvi APIs REST em Java e Spring Boot para ingestão e processamento de dados, atendendo alto volume de requisições diárias.",
+        "Construí interfaces em React e TypeScript para dashboards internos de visualização de dados.",
+        "Participei da modernização de aplicações legadas (Java 8, JSF, PrimeFaces, EJB) para arquitetura de microsserviços.",
+        "Atuei em cerimônias Scrum e Sprint Reviews junto ao cliente."
+      ],
+      "stack": [
+        "Java 8",
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "Spring Data JPA",
+        "JSF",
+        "PrimeFaces",
+        "EJB"
+      ],
+      "current": false
     },
     {
       "company": "Stefanini Brasil",
-      "role": "Estagiário de Desenvolvimento de Software",
-      "period": "Jan 2024 - Out 2024",
-      "description": "Desenvolvimento e manutenção de aplicações Java 8. Construção de APIs REST utilizando Spring Boot. Desenvolvimento de interfaces React. Uso de ferramentas como Git e SonarLint para controle de versão e qualidade de código. Participação em cerimônias ágeis e code reviews. Reconhecido com promoção para Desenvolvedor Júnior após 10 meses devido ao desempenho e contribuição nos projetos."
+      "role": "Estagiário em Desenvolvimento de Software",
+      "period": "Jan 2024 — Out 2024",
+      "summary": "Primeira experiência em produção: manutenção de aplicações Java 8 e construção de APIs REST.",
+      "highlights": [
+        "Desenvolvi e mantive aplicações Java 8 e construí APIs REST com Spring Boot.",
+        "Desenvolvi interfaces em React para ferramentas internas.",
+        "Promovido a Desenvolvedor Júnior em 10 meses."
+      ],
+      "stack": [
+        "Java 8",
+        "Spring Boot",
+        "React",
+        "Git",
+        "SonarLint"
+      ],
+      "current": false
+    }
+  ],
+  "education": [
+    {
+      "institution": "FIAP",
+      "degree": "Pós-graduação em Arquitetura de Software",
+      "period": "Fev 2026 — Dez 2026",
+      "status": "Em andamento"
+    },
+    {
+      "institution": "Anhanguera",
+      "degree": "Bacharelado em Engenharia de Software",
+      "period": "Fev 2026 — Dez 2029",
+      "status": "Em andamento"
+    },
+    {
+      "institution": "SPTech School",
+      "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "period": "Ago 2023 — Jun 2025",
+      "status": "Concluído"
     }
   ]
 }
