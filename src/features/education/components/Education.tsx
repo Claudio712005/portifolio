@@ -1,31 +1,42 @@
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
-import { SectionTitle } from '@/components/ui/SectionTitle'
-import { EducationCard } from './EducationCard'
+import { Badge } from '@/components/ui/badge'
+import { Reveal } from '@/components/ui/reveal'
+import { SectionHeading } from '@/components/ui/section-heading'
 import type { Dictionary } from '@/types/dictionary'
-import type { Education as EducationType } from '@/types/profile'
+import type { Education as EducationItem } from '@/types/profile'
 
 interface EducationProps {
   dict: Dictionary['education']
-  education: EducationType[]
+  education: EducationItem[]
 }
 
 export function Education({ dict, education }: EducationProps) {
   return (
-    <section id="education" className="px-4 py-24">
-      <div className="mx-auto max-w-3xl">
-        <AnimatedSection>
-          <SectionTitle title={dict.title} />
-        </AnimatedSection>
+    <section
+      id="education"
+      aria-labelledby="education-title"
+      className="border-b border-line px-5 py-24 lg:px-8"
+    >
+      <div className="mx-auto max-w-shell">
+        <Reveal>
+          <SectionHeading index="05" titleId="education-title" kicker={dict.kicker} title={dict.title} />
+        </Reveal>
 
-        <div className="relative ml-1 mt-10 border-l-2 border-indigo-500/30 pl-6">
-          <div className="flex flex-col gap-8">
-            {education.map((item, index) => (
-              <AnimatedSection key={item.institution + item.degree} delay={index * 0.1}>
-                <EducationCard education={item} />
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
+        <ul className="mt-12 divide-y divide-line border-y border-line">
+          {education.map((item, index) => (
+            <li key={`${item.institution}-${item.degree}`}>
+              <Reveal delay={index * 0.05}>
+                <div className="grid gap-2 py-6 sm:grid-cols-[minmax(0,170px)_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6">
+                  <p className="font-mono text-xs text-fg-subtle">{item.period}</p>
+                  <div>
+                    <h3 className="text-base font-medium text-fg">{item.degree}</h3>
+                    <p className="mt-1 text-sm text-fg-muted">{item.institution}</p>
+                  </div>
+                  <Badge label={item.status} variant="outline" />
+                </div>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

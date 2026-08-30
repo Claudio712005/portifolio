@@ -1,32 +1,45 @@
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
-import { SectionTitle } from '@/components/ui/SectionTitle'
-import { ExperienceCard } from './ExperienceCard'
+import { Reveal } from '@/components/ui/reveal'
+import { SectionHeading } from '@/components/ui/section-heading'
+import { ExperienceEntry } from './experience-entry'
 import type { Dictionary } from '@/types/dictionary'
-import type { Experience as ExperienceType } from '@/types/profile'
+import type { Experience as ExperienceItem } from '@/types/profile'
 
 interface ExperienceProps {
   dict: Dictionary['experience']
-  experience: ExperienceType[]
+  experience: ExperienceItem[]
 }
 
 export function Experience({ dict, experience }: ExperienceProps) {
   return (
-    <section id="experience" className="bg-slate-50 px-4 py-24 dark:bg-slate-800/20">
-      <div className="mx-auto max-w-3xl">
-        <AnimatedSection>
-          <SectionTitle title={dict.title} />
-        </AnimatedSection>
+    <section
+      id="experience"
+      aria-labelledby="experience-title"
+      className="border-b border-line bg-surface-2/50 px-5 py-24 lg:px-8"
+    >
+      <div className="mx-auto max-w-shell">
+        <Reveal>
+          <SectionHeading
+            titleId="experience-title"
+            index="04"
+            kicker={dict.kicker}
+            title={dict.title}
+            subtitle={dict.subtitle}
+          />
+        </Reveal>
 
-        <div className="flex flex-col gap-10">
-          {experience.map((entry, index) => (
-            <AnimatedSection key={`${entry.company}-${entry.role}`} delay={index * 0.1}>
-              <ExperienceCard
-                experience={entry}
-                presentLabel={dict.present}
-                showMoreLabel={dict.show_more}
-                showLessLabel={dict.show_less}
+        <div className="mt-12 border-l border-line">
+          {experience.map((item, index) => (
+            <Reveal
+              key={`${item.company}-${item.period}`}
+              delay={index * 0.05}
+              className="pb-12 last:pb-0"
+            >
+              <ExperienceEntry
+                experience={item}
+                dict={dict}
+                detailsId={`experience-details-${index}`}
               />
-            </AnimatedSection>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,53 +1,35 @@
-import dynamic from 'next/dynamic'
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
-import { SectionTitle } from '@/components/ui/SectionTitle'
-import { SkillCard } from './SkillCard'
+import { Reveal } from '@/components/ui/reveal'
+import { SectionHeading } from '@/components/ui/section-heading'
+import { SkillGroupCard } from './skill-group-card'
 import type { Dictionary } from '@/types/dictionary'
-import type { GroupedSkills, SkillCategory } from '@/types/profile'
-
-const SkillsThreeBg = dynamic(
-  () => import('@/components/ui/skills-three-bg').then((m) => ({ default: m.SkillsThreeBg })),
-  { ssr: false },
-)
+import type { SkillGroup } from '@/types/profile'
 
 interface SkillsProps {
   dict: Dictionary['skills']
-  groupedSkills: GroupedSkills
+  groups: SkillGroup[]
 }
 
-const categoryOrder: SkillCategory[] = [
-  'backend',
-  'frontend',
-  'database',
-  'devops',
-  'cloud',
-  'messaging',
-  'architecture',
-  'testing',
-  'ai'
-]
-
-export function Skills({ dict, groupedSkills }: SkillsProps) {
-  const entries = categoryOrder
-    .filter((cat) => Boolean(groupedSkills[cat]?.length))
-    .map((cat) => ({ category: cat, skills: groupedSkills[cat]! }))
-
+export function Skills({ dict, groups }: SkillsProps) {
   return (
-    <section id="skills" className="relative overflow-hidden bg-slate-50 px-4 py-24 dark:bg-slate-800/20">
-      <SkillsThreeBg />
-      <div className="mx-auto max-w-6xl">
-        <AnimatedSection>
-          <SectionTitle title={dict.title} />
-        </AnimatedSection>
+    <section
+      id="skills"
+      aria-labelledby="skills-title"
+      className="border-b border-line bg-surface-2/50 px-5 py-24 lg:px-8"
+    >
+      <div className="mx-auto max-w-shell">
+        <Reveal>
+          <SectionHeading titleId="skills-title" index="02" kicker={dict.kicker} title={dict.title} subtitle={dict.subtitle} />
+        </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {entries.map(({ category, skills }, index) => (
-            <AnimatedSection key={category} delay={index * 0.08}>
-              <SkillCard
-                categoryLabel={dict.categories[category] ?? category}
-                skills={skills}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {groups.map((group, index) => (
+            <Reveal key={group.category} delay={index * 0.04}>
+              <SkillGroupCard
+                group={group}
+                label={dict.categories[group.category] ?? group.category}
+                index={String(index + 1).padStart(2, '0')}
               />
-            </AnimatedSection>
+            </Reveal>
           ))}
         </div>
       </div>

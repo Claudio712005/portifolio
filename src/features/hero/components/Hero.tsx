@@ -1,144 +1,111 @@
-'use client'
-
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { Icon } from '@/components/ui/icon'
 import type { Dictionary } from '@/types/dictionary'
 import type { ProfileBasics } from '@/types/profile'
-import { HeroThreeBg } from '@/components/ui/hero-three-bg'
 
 interface HeroProps {
   dict: Dictionary['hero']
   basics: ProfileBasics
 }
 
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, delay, ease: 'easeOut' },
-})
-
-const fadeIn = (delay: number) => ({
-  initial: { opacity: 0, scale: 0.92 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.6, delay, ease: 'easeOut' },
-})
-
 export function Hero({ dict, basics }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-20"
+      aria-labelledby="hero-name"
+      className="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden border-b border-line"
     >
-      <HeroThreeBg />
-
-      <motion.div
-        className="pointer-events-none absolute -top-32 right-0 h-[600px] w-[600px] rounded-full bg-indigo-500/10 blur-3xl"
-        animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        aria-hidden="true"
-      />
-      <motion.div
-        className="pointer-events-none absolute -bottom-48 -left-24 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-3xl"
-        animate={{ y: [0, -25, 0], x: [0, 20, 0] }}
-        transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
+      <div className="bg-blueprint mask-fade-b pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-accent/10 blur-[120px]"
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-12 md:flex-row md:items-center md:justify-between">
-        <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          <motion.p
-            {...fadeUp(0)}
-            className="mb-4 font-mono text-lg text-indigo-600 dark:text-indigo-400"
-          >
-            {dict.greeting}
-          </motion.p>
+      <div className="relative mx-auto grid w-full max-w-shell gap-12 px-5 py-20 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:px-8">
+        <div>
+          <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 py-1 pl-2 pr-3 font-mono text-[11px] uppercase tracking-wider text-fg-muted backdrop-blur">
+            <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
+              <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-accent" />
+            </span>
+            {dict.kicker}
+          </p>
 
-          <motion.h1
-            {...fadeUp(0.1)}
-            className="mb-4 text-5xl font-bold text-slate-900 dark:text-white md:text-6xl"
+          <h1
+            id="hero-name"
+            className="mt-6 text-balance text-5xl font-semibold leading-[0.95] tracking-tightest text-fg sm:text-6xl lg:text-7xl"
           >
             {basics.name}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            {...fadeUp(0.2)}
-            className="mb-6 text-2xl font-semibold text-indigo-600 dark:text-indigo-400 md:text-3xl"
-          >
-            {basics.title}
-          </motion.p>
+          <p className="mt-5 font-mono text-sm leading-relaxed text-fg-muted">
+            <span className="text-accent">{basics.role}</span>
+            <span className="mx-2 hidden text-line-strong sm:inline" aria-hidden="true">
+              |
+            </span>
+            <span className="block sm:inline">{basics.title}</span>
+          </p>
 
-          <motion.p
-            {...fadeUp(0.3)}
-            className="mb-10 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
-          >
-            {basics.summary}
-          </motion.p>
+          <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-fg-muted">
+            {basics.valueProp}
+          </p>
 
-          <motion.div
-            {...fadeUp(0.4)}
-            className="flex flex-col items-center gap-4 sm:flex-row md:items-start"
-          >
-            <motion.a
+          <div className="mt-10 flex flex-wrap items-center gap-3">
+            <a
               href="#projects"
-              className="rounded-lg bg-indigo-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-indigo-700"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-2 rounded-[4px] bg-accent px-5 py-3 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90"
             >
               {dict.cta_projects}
-            </motion.a>
-            <motion.a
+              <Icon name="arrow-down" className="h-4 w-4" />
+            </a>
+            <a
               href="#contact"
-              className="rounded-lg border border-slate-300 px-8 py-3 font-semibold text-slate-700 transition-colors hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-600 dark:text-slate-300 dark:hover:border-indigo-500 dark:hover:text-white"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-2 rounded-[4px] border border-line-strong px-5 py-3 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
             >
               {dict.cta_contact}
-            </motion.a>
-            {dict.cta_resume && (
-              <motion.a
-                href="/portifolio/resume.pdf"
-                download
-                className="flex items-center gap-2 rounded-lg border border-indigo-500 px-8 py-3 font-semibold text-indigo-600 transition-colors hover:bg-indigo-500/10 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-white"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                  />
-                </svg>
-                {dict.cta_resume}
-              </motion.a>
-            )}
-          </motion.div>
+              <Icon name="arrow-up-right" className="h-4 w-4" />
+            </a>
+            <a
+              href="/portifolio/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-[4px] px-3 py-3 text-sm font-medium text-fg-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
+            >
+              <Icon name="download" className="h-4 w-4" />
+              {dict.cta_resume}
+            </a>
+          </div>
+
+          <dl className="mt-14 grid max-w-2xl grid-cols-1 gap-px overflow-hidden rounded-[4px] border border-line bg-line sm:grid-cols-3">
+            {dict.stats.map((stat) => (
+              <div key={stat.label} className="bg-bg px-4 py-4">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-subtle">
+                  {stat.label}
+                </dt>
+                <dd className="mt-1.5 text-base font-medium text-fg">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        <motion.div
-          {...fadeIn(0.3)}
-          className="relative shrink-0"
-        >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-500 opacity-20 blur-xl" />
-          <div className="relative h-64 w-64 overflow-hidden rounded-full ring-4 ring-indigo-500/30 ring-offset-4 ring-offset-white dark:ring-offset-slate-900 md:h-72 md:w-72">
-            <Image
-              src="/portifolio/img/profile.png"
-              alt={basics.name}
-              fill
-              sizes="(max-width: 768px) 256px, 288px"
-              className="object-cover"
-              priority
-            />
+        <div className="relative order-first justify-self-start lg:order-none lg:justify-self-end">
+          <div className="relative h-40 w-40 border border-line-strong p-1.5 sm:h-52 sm:w-52 lg:h-64 lg:w-64">
+            <span className="absolute -left-px -top-px h-3 w-3 border-l border-t border-accent" aria-hidden="true" />
+            <span className="absolute -bottom-px -right-px h-3 w-3 border-b border-r border-accent" aria-hidden="true" />
+            <div className="relative h-full w-full overflow-hidden bg-surface-2 grayscale-[0.15]">
+              <Image
+                src="/portifolio/img/profile.png"
+                alt={basics.name}
+                fill
+                sizes="(max-width: 640px) 160px, (max-width: 1024px) 208px, 256px"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
-        </motion.div>
+          <p className="mt-3 flex items-center gap-1.5 font-mono text-[11px] text-fg-subtle">
+            <Icon name="pin" className="h-3.5 w-3.5" />
+            {basics.location}
+          </p>
+        </div>
       </div>
     </section>
   )
