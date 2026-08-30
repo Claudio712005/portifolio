@@ -4,7 +4,7 @@ Site de portfólio pessoal moderno, responsivo e multilíngue — construído co
 
 ## Visão Geral
 
-Aplicação de página única (SPA) com roteamento por localidade, animações fluidas e fundos 3D interativos. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.
+Aplicação de página única (SPA) com roteamento por localidade, tema claro/escuro e um sistema visual próprio — "Clean Dark" e "Clean Light" — construído sobre tokens de cor em CSS variables. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.
 
 ## Tecnologias
 
@@ -14,7 +14,7 @@ Aplicação de página única (SPA) com roteamento por localidade, animações f
 | Linguagem | TypeScript |
 | Estilização | Tailwind CSS |
 | Animações | Framer Motion |
-| 3D / WebGL | Three.js |
+| Tipografia | Inter + JetBrains Mono (next/font) |
 | Temas | next-themes |
 | Internacionalização | i18n (pt-BR / en / es) |
 
@@ -22,8 +22,10 @@ Aplicação de página única (SPA) com roteamento por localidade, animações f
 
 - **Multilíngue** — suporte a Português (padrão), Inglês e Espanhol via roteamento dinâmico `[locale]`
 - **Tema claro/escuro** — alternância sem flash (SSR-safe) via `next-themes`
-- **Fundos 3D interativos** — cenas WebGL com Three.js (ondas, geometrias flutuantes, constelação de partículas)
-- **Trilha do mouse** — efeito canvas animado que segue o cursor
+- **Navegação fixa com scroll spy** — âncoras internas destacam a seção visível, com menu dedicado no mobile
+- **Projetos com problema declarado** — cada card abre pelo problema resolvido, seguido de stack e links
+- **Blocos de cor como capa** — gradientes CSS no lugar de screenshots, sem asset externo
+- **Acessibilidade** — HTML semântico, skip link, foco visível, contraste verificado e `prefers-reduced-motion`
 - **Seções completas** — Hero, Sobre, Habilidades, Projetos, Experiência, Formação e Contato
 - **Dados estáticos tipados** — perfil carregado de arquivos JSON por localidade, sem chamadas a APIs externas
 - **Server Components por padrão** — máximo de performance e SEO com Next.js App Router
@@ -47,8 +49,11 @@ src/
 │   └── layout/            # Header, Footer, providers
 ├── lib/
 │   ├── i18n/              # Configuração e dicionários de tradução
-│   └── three/             # Cenas e utilitários WebGL
-├── hooks/                 # Custom hooks
+│   ├── group-skills.ts    # Agrupamento das skills por categoria
+│   ├── split-projects.ts  # Separação entre projetos em destaque e demais
+│   ├── project-cover.ts   # Gradientes das capas de projeto
+│   └── nav-sections.ts    # Âncoras da navegação
+├── hooks/                 # Scroll spy e estado de scroll do header
 └── types/                 # Tipagens globais
 data/
 ├── profile.pt-BR.json     # Dados do perfil em português
