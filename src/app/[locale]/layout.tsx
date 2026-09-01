@@ -1,9 +1,13 @@
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
+import { RouteTransition } from '@/components/layout/route-transition'
+import { TypeStageProvider } from '@/features/canvas/components/type-stage'
+import { TypeStageLayer } from '@/features/canvas/components/type-stage-layer'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import { getProfile } from '@/lib/get-profile'
-import { getNavSections } from '@/lib/nav-sections'
+import { getNavLinks } from '@/lib/nav-links'
 import { locales } from '@/lib/i18n/config'
+import { toHeadlineLines } from '@/lib/headline'
 import type { Metadata } from 'next'
 
 interface LocaleLayoutProps {
@@ -36,17 +40,25 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   ])
 
   return (
-    <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[4px] focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-accent-fg"
-      >
-        {dict.nav.skip_to_content}
-      </a>
+    <TypeStageProvider initialLines={toHeadlineLines(profile.basics.name)}>
+      <div className="grain">
+        <TypeStageLayer />
 
-      <Header dict={dict.nav} sections={getNavSections(dict.nav)} locale={params.locale} />
-      <main id="main">{children}</main>
-      <Footer dict={dict.footer} name={profile.basics.name} year="2026" />
-    </>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[4px] focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-accent-fg"
+        >
+          {dict.nav.skip_to_content}
+        </a>
+
+        <Header dict={dict.nav} links={getNavLinks(dict.nav, params.locale)} locale={params.locale} />
+
+        <main id="main" className="relative z-10">
+          <RouteTransition>{children}</RouteTransition>
+        </main>
+
+        <Footer dict={dict.footer} name={profile.basics.name} year="2026" />
+      </div>
+    </TypeStageProvider>
   )
 }

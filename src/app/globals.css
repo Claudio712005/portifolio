@@ -3,60 +3,49 @@
 @tailwind utilities;
 
 @layer base {
-  /* Clean Light — paper-neutral base, single signal accent. */
+  /*
+   * Ink — the committed world. A near-black ground with a cool cast so the
+   * WebGL layer has something to sit in, one signal red carried over from the
+   * previous identity, and nothing else competing for attention.
+   */
   :root {
-    --bg: 250 250 249;
-    --surface: 255 255 255;
-    --surface-2: 244 244 242;
-    --line: 226 226 222;
-    --line-strong: 202 202 197;
-    --fg: 12 12 15;
-    --fg-muted: 88 88 96;
-    --fg-subtle: 122 122 130;
-    --accent: 191 15 55;
-    --accent-fg: 255 255 255;
-    --accent-soft: 253 235 239;
-    color-scheme: light;
-  }
-
-  /* Clean Dark — near-black ground, same accent recalibrated for contrast. */
-  .dark {
-    --bg: 11 11 14;
-    --surface: 17 17 21;
-    --surface-2: 23 23 29;
-    --line: 36 36 44;
-    --line-strong: 58 58 68;
-    --fg: 245 245 247;
-    --fg-muted: 156 156 166;
-    --fg-subtle: 118 118 128;
-    --accent: 233 69 96;
-    --accent-fg: 11 11 14;
-    --accent-soft: 46 18 27;
+    --bg: 9 9 12;
+    --surface: 15 15 19;
+    --surface-2: 21 21 26;
+    --line: 33 33 40;
+    --line-strong: 56 56 66;
+    --fg: 244 244 246;
+    --fg-muted: 150 150 162;
+    --fg-subtle: 108 108 120;
+    --accent: 240 62 84;
+    --accent-fg: 9 9 12;
+    --accent-soft: 48 16 24;
     color-scheme: dark;
   }
 
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+  /* Bone — the same world under daylight, not a second design. */
+  .light {
+    --bg: 244 243 239;
+    --surface: 252 251 248;
+    --surface-2: 236 235 230;
+    --line: 219 217 210;
+    --line-strong: 190 188 179;
+    --fg: 18 17 16;
+    --fg-muted: 92 90 86;
+    --fg-subtle: 128 126 120;
+    --accent: 194 16 52;
+    --accent-fg: 252 251 248;
+    --accent-soft: 250 232 236;
+    color-scheme: light;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
+  html {
+    /* No smooth scroll: ScrollTrigger owns the scroll position. */
+    scroll-behavior: auto;
   }
 
   body {
     @apply bg-bg text-fg antialiased;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
   :focus-visible {
@@ -83,19 +72,73 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    /*
+     * Decorative loops stop outright, but colour and state feedback stays —
+     * it only gets faster. Reduced motion means less movement, not a page
+     * where nothing acknowledges the visitor.
+     */
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 120ms !important;
+    }
+  }
 }
 
 @layer components {
-  /* Hairline blueprint grid used behind the hero and the contact block. */
-  .bg-blueprint {
-    background-image:
-      linear-gradient(to right, rgb(var(--line) / 0.7) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(var(--line) / 0.7) 1px, transparent 1px);
-    background-size: 72px 72px;
+  /* Display lockup. Width axis is animated by GSAP; this is the rest state. */
+  .type-display {
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+    font-variation-settings: 'wdth' 100, 'opsz' 48;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.86;
+    text-wrap: balance;
   }
 
-  .mask-fade-b {
-    mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
+  /* Technical caption voice: labels, indices, metadata. */
+  .type-meta {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /*
+   * Film grain. A real texture over the whole page so flat dark areas have
+   * material rather than reading as empty canvas.
+   */
+  .grain::after {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /*
+   * Collapsed disclosure state lives in CSS so the server HTML is correct
+   * before hydration. GSAP's inline styles win during the transition.
+   */
+  [data-disclosure] {
+    overflow: hidden;
+  }
+
+  [data-disclosure][data-open='false'] {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .edge-fade-b {
+    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
   }
 }

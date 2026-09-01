@@ -11,63 +11,56 @@ export interface Dictionary {
     close_menu: string
     theme_toggle: string
     language_select: string
+    home: string
+    work: string
     about: string
-    skills: string
-    projects: string
-    experience: string
-    education: string
     contact: string
   }
-  hero: {
-    kicker: string
-    cta_projects: string
-    cta_contact: string
-    cta_resume: string
-    stats: { label: string; value: string }[]
+  home: {
+    scroll_cue: string
+    work_title: string
+    work_lead: string
+    work_all: string
+    capabilities_title: string
+    capabilities_lead: string
+    trajectory_title: string
+    trajectory_all: string
+    contact_title: string
   }
-  about: {
-    kicker: string
+  work: {
     title: string
-    paragraphs: string[]
-    facts: { label: string; value: string }[]
-  }
-  skills: {
-    kicker: string
-    title: string
-    subtitle: string
-    categories: Record<string, string>
-  }
-  projects: {
-    kicker: string
-    title: string
-    subtitle: string
+    lead: string
+    count_label: string
     featured_label: string
-    problem_label: string
+    year_label: string
     stack_label: string
+    problem_title: string
+    approach_title: string
     view_code: string
     view_live: string
     no_repo: string
-    more_title: string
-    view_more: string
-    view_less: string
-    read_more: string
-    read_less: string
+    back: string
+    next_label: string
   }
-  experience: {
-    kicker: string
+  about: {
     title: string
-    subtitle: string
+    lead: string
+    paragraphs: string[]
+    facts_title: string
+    facts: { label: string; value: string }[]
+    experience_title: string
+    education_title: string
+    skills_title: string
+    skills_lead: string
     current_label: string
     stack_label: string
     show_more: string
     show_less: string
   }
-  education: {
-    kicker: string
-    title: string
+  skills: {
+    categories: Record<string, string>
   }
   contact: {
-    kicker: string
     title: string
     description: string
     email_label: string
@@ -75,6 +68,7 @@ export interface Dictionary {
     linkedin_label: string
     resume_label: string
     location_label: string
+    availability_label: string
   }
   footer: {
     built_with: string

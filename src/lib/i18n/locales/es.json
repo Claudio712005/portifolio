@@ -11,40 +11,45 @@
     "close_menu": "Cerrar menú",
     "theme_toggle": "Cambiar entre tema claro y oscuro",
     "language_select": "Seleccionar idioma",
+    "home": "Inicio",
+    "work": "Proyectos",
     "about": "Sobre mí",
-    "skills": "Habilidades",
-    "projects": "Proyectos",
-    "experience": "Experiencia",
-    "education": "Formación",
     "contact": "Contacto"
   },
-  "hero": {
-    "kicker": "Disponible para nuevos proyectos",
-    "cta_projects": "Ver proyectos",
-    "cta_contact": "Hablemos",
-    "cta_resume": "Descargar CV",
-    "stats": [
-      {
-        "label": "Años en producción",
-        "value": "3+"
-      },
-      {
-        "label": "Sectores críticos",
-        "value": "Banca y Energía"
-      },
-      {
-        "label": "Del legado a la nube",
-        "value": "Java 8 → 21"
-      }
-    ]
+  "home": {
+    "scroll_cue": "Desliza",
+    "work_title": "Trabajo seleccionado",
+    "work_lead": "Cada uno empezó por un problema concreto. El stack vino después.",
+    "work_all": "Ver todos los proyectos",
+    "capabilities_title": "Dónde soy útil",
+    "capabilities_lead": "Todo lo listado aquí ya corrió en un proyecto entregado, no solo en un tutorial.",
+    "trajectory_title": "Trayectoria",
+    "trajectory_all": "Ver la trayectoria completa",
+    "contact_title": "Hablemos"
+  },
+  "work": {
+    "title": "Proyectos",
+    "lead": "Selección de proyectos propios. Cada uno empezó por un problema concreto — el stack vino después.",
+    "count_label": "proyectos",
+    "featured_label": "Destacado",
+    "year_label": "Año",
+    "stack_label": "Stack",
+    "problem_title": "El problema",
+    "approach_title": "El enfoque",
+    "view_code": "Ver código",
+    "view_live": "Ver en vivo",
+    "no_repo": "Repositorio privado",
+    "back": "Todos los proyectos",
+    "next_label": "Siguiente proyecto"
   },
   "about": {
-    "kicker": "Sobre mí",
     "title": "Sistemas aburridos, en el mejor sentido de la palabra",
+    "lead": "Ingeniero backend en sistemas que no se pueden caer.",
     "paragraphs": [
       "Trabajo en los dos extremos del ciclo de vida de un software. Por un lado, sistemas legados de misión crítica en el sector energético — Java 8, JSF, EJB — donde una exportación que se cae por timeout significa un informe regulatorio atrasado. Por el otro, microservicios bancarios reactivos en Java 21 y Kotlin, con WebFlux, Redis y Circuit Breaker aguantando los picos de carga. Ambos extremos enseñan la misma lección por caminos opuestos: lo que importa es entregar sin tumbar el negocio que ya está en pie.",
       "Me gustan los sistemas predecibles, observables y fáciles de tocar para la próxima persona. En la práctica eso es arquitectura hexagonal con el dominio libre de framework, decisiones registradas en ADRs en lugar de en la memoria de quien las tomó, y pruebas que corren contra el servicio real con Testcontainers. Actualmente curso un posgrado en Arquitectura de Software en FIAP y escribo bastante Kotlin, Go y — últimamente — infraestructura de aplicaciones de IA con MCP y RAG."
     ],
+    "facts_title": "Resumen",
     "facts": [
       {
         "label": "Base",
@@ -62,12 +67,17 @@
         "label": "Formación",
         "value": "Posgrado en Arquitectura de Software — FIAP"
       }
-    ]
+    ],
+    "experience_title": "Experiencia",
+    "education_title": "Formación",
+    "skills_title": "Stack en producción",
+    "skills_lead": "Agrupado por capa.",
+    "current_label": "Actual",
+    "stack_label": "Stack",
+    "show_more": "Ver detalles",
+    "show_less": "Ocultar detalles"
   },
   "skills": {
-    "kicker": "Stack",
-    "title": "Herramientas que uso en producción",
-    "subtitle": "Agrupadas por capa. Todo lo que está aquí ya corrió en un proyecto entregado, no solo en un tutorial.",
     "categories": {
       "backend": "Backend",
       "architecture": "Arquitectura",
@@ -81,47 +91,18 @@
       "frontend": "Frontend"
     }
   },
-  "projects": {
-    "kicker": "Proyectos",
-    "title": "Lo que construí y por qué",
-    "subtitle": "Selección de proyectos propios. Cada uno empezó por un problema concreto — el stack vino después.",
-    "featured_label": "Destacado",
-    "problem_label": "Problema",
-    "stack_label": "Stack",
-    "view_code": "Ver código",
-    "view_live": "Ver en vivo",
-    "no_repo": "Repositorio privado",
-    "more_title": "Otros proyectos",
-    "view_more": "Mostrar más proyectos",
-    "view_less": "Mostrar menos",
-    "read_more": "Leer más",
-    "read_less": "Leer menos"
-  },
-  "experience": {
-    "kicker": "Trayectoria",
-    "title": "Experiencia profesional",
-    "subtitle": "De practicante a semi senior en poco más de dos años, siempre en sistemas que no pueden caerse.",
-    "current_label": "Actual",
-    "stack_label": "Stack",
-    "show_more": "Ver detalles",
-    "show_less": "Ocultar detalles"
-  },
-  "education": {
-    "kicker": "Formación",
-    "title": "Educación y certificaciones"
-  },
   "contact": {
-    "kicker": "Contacto",
     "title": "Hablemos de tu backend",
     "description": "Abierto a oportunidades remotas en Brasil y Europa, y a conversaciones técnicas sin compromiso. Respondo por correo en un día hábil.",
     "email_label": "Enviar correo",
     "github_label": "GitHub",
     "linkedin_label": "LinkedIn",
     "resume_label": "Currículum (PDF)",
-    "location_label": "Ubicación"
+    "location_label": "Ubicación",
+    "availability_label": "Disponibilidad"
   },
   "footer": {
-    "built_with": "Construido con Next.js, TypeScript y Tailwind CSS.",
+    "built_with": "Construido con Next.js, TypeScript, Three.js y GSAP.",
     "rights": "Todos los derechos reservados."
   }
 }
