@@ -16,6 +16,15 @@
     "about": "Sobre mí",
     "contact": "Contacto"
   },
+  "boot": {
+    "title": "iniciando",
+    "typeface": "tipografía",
+    "renderer": "renderizador",
+    "locale": "idioma",
+    "projects": "proyectos",
+    "ready": "listo",
+    "skip": "saltar intro"
+  },
   "home": {
     "scroll_cue": "Desliza",
     "work_title": "Trabajo seleccionado",

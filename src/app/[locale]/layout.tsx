@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { RouteTransition } from '@/components/layout/route-transition'
+import { BootSequence } from '@/features/boot/components/boot-sequence'
 import { TypeStageProvider } from '@/features/canvas/components/type-stage'
 import { TypeStageLayer } from '@/features/canvas/components/type-stage-layer'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
@@ -42,6 +43,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <TypeStageProvider initialLines={toHeadlineLines(profile.basics.name)}>
       <div className="grain">
+        <BootSequence
+          dict={dict.boot}
+          locale={params.locale}
+          projectCount={profile.projects.length}
+        />
+
         <TypeStageLayer />
 
         <a
@@ -51,7 +58,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           {dict.nav.skip_to_content}
         </a>
 
-        <Header dict={dict.nav} links={getNavLinks(dict.nav, params.locale)} locale={params.locale} />
+        <Header
+          dict={dict.nav}
+          links={getNavLinks(dict.nav, params.locale)}
+          locale={params.locale}
+          place={profile.basics.location.split(',')[0]}
+        />
 
         <main id="main" className="relative z-10">
           <RouteTransition>{children}</RouteTransition>

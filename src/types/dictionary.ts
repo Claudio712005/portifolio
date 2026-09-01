@@ -16,6 +16,15 @@ export interface Dictionary {
     about: string
     contact: string
   }
+  boot: {
+    title: string
+    typeface: string
+    renderer: string
+    locale: string
+    projects: string
+    ready: string
+    skip: string
+  }
   home: {
     scroll_cue: string
     work_title: string

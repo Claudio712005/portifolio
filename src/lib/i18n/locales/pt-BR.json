@@ -16,6 +16,15 @@
     "about": "Sobre",
     "contact": "Contato"
   },
+  "boot": {
+    "title": "iniciando",
+    "typeface": "tipografia",
+    "renderer": "renderizador",
+    "locale": "idioma",
+    "projects": "projetos",
+    "ready": "pronto",
+    "skip": "pular introdução"
+  },
   "home": {
     "scroll_cue": "Rolar",
     "work_title": "Trabalho selecionado",

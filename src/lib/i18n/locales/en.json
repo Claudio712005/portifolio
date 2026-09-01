@@ -16,6 +16,15 @@
     "about": "About",
     "contact": "Contact"
   },
+  "boot": {
+    "title": "booting",
+    "typeface": "typeface",
+    "renderer": "renderer",
+    "locale": "locale",
+    "projects": "projects",
+    "ready": "ready",
+    "skip": "skip intro"
+  },
   "home": {
     "scroll_cue": "Scroll",
     "work_title": "Selected work",
