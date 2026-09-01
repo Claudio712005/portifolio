@@ -40,6 +40,7 @@
     "title": "Proyectos",
     "lead": "Selección de proyectos propios. Cada uno empezó por un problema concreto — el stack vino después.",
     "count_label": "proyectos",
+    "index_label": "Índice",
     "featured_label": "Destacado",
     "year_label": "Año",
     "stack_label": "Stack",

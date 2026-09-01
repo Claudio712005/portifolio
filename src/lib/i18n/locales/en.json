@@ -40,6 +40,7 @@
     "title": "Projects",
     "lead": "A selection of my own projects. Each one started from a concrete problem — the stack came after.",
     "count_label": "projects",
+    "index_label": "Index",
     "featured_label": "Featured",
     "year_label": "Year",
     "stack_label": "Stack",

@@ -40,6 +40,7 @@ export interface Dictionary {
     title: string
     lead: string
     count_label: string
+    index_label: string
     featured_label: string
     year_label: string
     stack_label: string
