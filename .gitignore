@@ -11,8 +11,7 @@ out/
 .env.local
 
 # local tooling
-.claude/skills/
-.claude/settings.local.json
+.claude/
 
 # os
 .DS_Store
