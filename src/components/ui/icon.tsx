@@ -1,5 +1,6 @@
 type IconName =
   | 'arrow-down'
+  | 'arrow-right'
   | 'arrow-up-right'
   | 'chevron-down'
   | 'close'
@@ -19,6 +20,7 @@ interface IconProps {
 
 const STROKE_PATHS: Partial<Record<IconName, string>> = {
   'arrow-down': 'M12 5v14m0 0l-6-6m6 6l6-6',
+  'arrow-right': 'M5 12h14m0 0l-6-6m6 6l-6 6',
   'arrow-up-right': 'M7 17L17 7m0 0H8m9 0v9',
   'chevron-down': 'M6 9l6 6 6-6',
   close: 'M6 6l12 12M18 6L6 18',
