@@ -17,7 +17,7 @@ O título de cada página é pintado num canvas 2D e entregue a um shader que o 
 | Estilização | Tailwind CSS |
 | 3D / WebGL | Three.js (shader próprio, sem react-three-fiber) |
 | Animações | GSAP + ScrollTrigger |
-| Tipografia | Bricolage Grotesque + Instrument Sans + JetBrains Mono (next/font) |
+| Tipografia | Zodiak (self-hosted, ITF FFL) + Instrument Sans + JetBrains Mono |
 | Temas | next-themes |
 | Internacionalização | i18n (pt-BR / en / es) |
 
@@ -29,6 +29,8 @@ O título de cada página é pintado num canvas 2D e entregue a um shader que o 
 - **Fallback sem WebGL** — mobile e reduced-motion recebem o mesmo desenho em tipografia real; o chunk do three.js (≈504 kB) só é buscado quando vai ser usado
 - **Página por projeto** — cada um dos 13 projetos tem rota própria, aberta pelo problema e seguida da solução, stack e links
 - **Índice editorial** — projetos e stack como listas tipográficas, sem grade de cards
+- **Sequência de boot** — intro que reporta marcos reais e só sai quando as fontes carregaram; uma vez por sessão, nunca sob `prefers-reduced-motion`
+- **Reação por seção** — scramble, eixo de peso variável, atração magnética e leitura amarrada ao scroll; cada seção reage de um jeito
 - **Acessibilidade** — HTML semântico, skip link, foco visível, contraste verificado e `prefers-reduced-motion`
 - **Export estático** — 50 páginas HTML pré-renderizadas (3 localidades), sem runtime de servidor
 - **Dados estáticos tipados** — perfil carregado de arquivos JSON por localidade, sem chamadas a APIs externas
