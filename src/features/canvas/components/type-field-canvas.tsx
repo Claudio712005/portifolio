@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { useTheme } from 'next-themes'
 import { TypeField } from '@/lib/canvas/type-field'
 import { readDisplayFontFamily, readThemePalette } from '@/lib/canvas/theme-palette'
@@ -24,8 +24,27 @@ export function TypeFieldCanvas({ onReady }: TypeFieldCanvasProps) {
   const { resolvedTheme } = useTheme()
   const onReadyRef = useRef(onReady)
   onReadyRef.current = onReady
+
+  /*
+   * Deferred work — font loading, resize, the mount effect itself — must read
+   * the headline that is current when it runs, never the one that was current
+   * when it was scheduled. A late callback holding a stale closure repaints the
+   * previous page's title and nothing corrects it until the next navigation.
+   */
+  const linesRef = useRef(lines)
+  linesRef.current = lines
   const layoutRef = useRef(layout)
   layoutRef.current = layout
+
+  const buildRequest = useCallback(
+    () => ({
+      lines: linesRef.current,
+      fontFamily: readDisplayFontFamily(),
+      fontWeight: WEIGHT,
+      ...layoutRef.current,
+    }),
+    [],
+  )
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -35,12 +54,7 @@ export function TypeFieldCanvas({ onReady }: TypeFieldCanvasProps) {
     try {
       field = new TypeField({
         canvas,
-        text: {
-          lines,
-          fontFamily: readDisplayFontFamily(),
-          fontWeight: WEIGHT,
-          ...layoutRef.current,
-        },
+        text: buildRequest(),
         palette: readThemePalette(),
         onFirstFrame: () => onReadyRef.current?.(),
       })
@@ -53,14 +67,7 @@ export function TypeFieldCanvas({ onReady }: TypeFieldCanvasProps) {
     field.start()
 
     /* The first paint can land before the display face is ready. */
-    void document.fonts.ready.then(() => {
-      field.setText({
-        lines,
-        fontFamily: readDisplayFontFamily(),
-        fontWeight: WEIGHT,
-        ...layoutRef.current,
-      })
-    })
+    void document.fonts.ready.then(() => field.setText(buildRequest()))
 
     const onResize = () => field.resize()
     const onPointerMove = (event: PointerEvent) => {
@@ -88,21 +95,11 @@ export function TypeFieldCanvas({ onReady }: TypeFieldCanvasProps) {
       field.dispose()
       fieldRef.current = null
     }
-    /* Mount once: later headline and theme changes are pushed by the effects below. */
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [buildRequest])
 
   useEffect(() => {
-    fieldRef.current?.setText(
-      {
-        lines,
-        fontFamily: readDisplayFontFamily(),
-        fontWeight: WEIGHT,
-        ...layout,
-      },
-      true,
-    )
-  }, [lines, layout])
+    fieldRef.current?.setText(buildRequest(), true)
+  }, [lines, layout, buildRequest])
 
   useEffect(() => {
     fieldRef.current?.setPalette(readThemePalette())
