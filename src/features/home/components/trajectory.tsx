@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Icon } from '@/components/ui/icon'
 import { Reveal } from '@/components/ui/reveal'
+import { ScrambleText } from '@/components/ui/scramble-text'
 import { SectionLabel } from '@/components/ui/section-label'
 import { TimelineRail } from '@/components/ui/timeline-rail'
 import type { Dictionary } from '@/types/dictionary'
@@ -27,7 +28,9 @@ export function Trajectory({ dict, experience, locale }: TrajectoryProps) {
                 className="absolute left-0 top-2 h-2 w-2 -translate-x-1/2 rounded-full border border-accent bg-bg"
               />
 
-              <p className="type-meta text-fg-subtle">{item.period}</p>
+              <p className="type-meta text-fg-subtle">
+                <ScrambleText text={item.period} auto />
+              </p>
 
               <h3 className="type-display mt-3 text-xl text-fg lg:text-2xl">{item.role}</h3>
               <p className="mt-1 font-mono text-sm text-accent">{item.company}</p>

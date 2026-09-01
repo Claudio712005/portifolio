@@ -8,6 +8,7 @@ import { Icon } from '@/components/ui/icon'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { LanguageSwitcher } from './language-switcher'
 import { useScrolled } from '@/hooks/use-scrolled'
+import { useLocalTime } from '@/hooks/use-local-time'
 import { MOTION, prefersReducedMotion, registerGsap } from '@/lib/gsap/register'
 import { homeHref, type NavLink } from '@/lib/nav-links'
 import type { Dictionary } from '@/types/dictionary'
@@ -16,12 +17,18 @@ interface HeaderProps {
   dict: Dictionary['nav']
   links: NavLink[]
   locale: string
+  /** Short place label shown beside the clock, e.g. "São Paulo". */
+  place: string
 }
 
-export function Header({ dict, links, locale }: HeaderProps) {
+/** Where the clock is read from; tracks the location in the profile data. */
+const TIME_ZONE = 'America/Sao_Paulo'
+
+export function Header({ dict, links, locale, place }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const scrolled = useScrolled()
   const pathname = usePathname()
+  const time = useLocalTime(TIME_ZONE, locale)
 
   const listRef = useRef<HTMLUListElement>(null)
   const markerRef = useRef<HTMLSpanElement>(null)
@@ -104,6 +111,11 @@ export function Header({ dict, links, locale }: HeaderProps) {
           <span className="h-1.5 w-1.5 rounded-full bg-accent transition-transform duration-200 group-hover:scale-150" />
           {dict.logo}
         </Link>
+
+        <p className="type-meta hidden text-fg-subtle lg:block" suppressHydrationWarning>
+          {place}
+          {time && <span className="ml-3 text-fg-muted">{time}</span>}
+        </p>
 
         <nav aria-label={dict.primary_nav} className="hidden md:block">
           <ul ref={listRef} className="relative flex items-center gap-1">

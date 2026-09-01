@@ -13,6 +13,7 @@ export function Manifesto({ basics }: ManifestoProps) {
   return (
     <section className="mx-auto max-w-shell px-5 py-28 lg:px-8 lg:py-40">
       <SplitText
+        mode="scrub"
         text={basics.valueProp}
         className="type-display max-w-5xl text-pretty text-d2 text-fg"
       />

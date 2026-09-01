@@ -1,4 +1,5 @@
 import { Icon } from '@/components/ui/icon'
+import { ScrambleText } from '@/components/ui/scramble-text'
 import { SectionLabel } from '@/components/ui/section-label'
 import type { Dictionary } from '@/types/dictionary'
 import type { ProfileBasics } from '@/types/profile'
@@ -27,6 +28,7 @@ export function ContactBlock({ dict, basics }: ContactBlockProps) {
 
         <a
           href={`mailto:${basics.email}`}
+          data-scramble-group
           className="group relative mt-12 block w-fit max-w-full"
         >
           <span
@@ -36,7 +38,7 @@ export function ContactBlock({ dict, basics }: ContactBlockProps) {
             {basics.email}
           </span>
           <span className="type-display relative block break-all text-d3 text-fg">
-            {basics.email}
+            <ScrambleText text={basics.email} group />
           </span>
         </a>
 
