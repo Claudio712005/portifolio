@@ -1,10 +1,12 @@
 # Portfólio Pessoal
 
-Site de portfólio pessoal moderno, responsivo e multilíngue — construído com Next.js 14, TypeScript e Tailwind CSS.
+Portfólio pessoal multilíngue com uma camada WebGL persistente: o título de cada rota é renderizado como material deformável, não como texto com efeito por cima.
 
 ## Visão Geral
 
-Aplicação de página única (SPA) com roteamento por localidade, tema claro/escuro e um sistema visual próprio — "Clean Dark" e "Clean Light" — construído sobre tokens de cor em CSS variables. Todo o conteúdo é alimentado por arquivos de dados estáticos versionados junto ao código, sem dependência de APIs externas.
+Site multi-rota com roteamento por localidade, tema claro/escuro e um sistema visual próprio — "Ink" e "Bone" — construído sobre tokens de cor em CSS variables que a cena WebGL também lê. Todo o conteúdo vem de arquivos de dados estáticos versionados junto ao código, sem APIs externas.
+
+O título de cada página é pintado num canvas 2D e entregue a um shader que o distorce, refrata e separa em canais de cor, reagindo ao cursor e ao scroll. Onde WebGL não se justifica — mobile, ponteiro grosseiro, `prefers-reduced-motion` — o mesmo título é tipografia real com o acento fora de registro, e o three.js nunca é baixado.
 
 ## Tecnologias
 
@@ -13,8 +15,9 @@ Aplicação de página única (SPA) com roteamento por localidade, tema claro/es
 | Framework | Next.js 14 (App Router) |
 | Linguagem | TypeScript |
 | Estilização | Tailwind CSS |
-| Animações | Framer Motion |
-| Tipografia | Inter + JetBrains Mono (next/font) |
+| 3D / WebGL | Three.js (shader próprio, sem react-three-fiber) |
+| Animações | GSAP + ScrollTrigger |
+| Tipografia | Bricolage Grotesque + Instrument Sans + JetBrains Mono (next/font) |
 | Temas | next-themes |
 | Internacionalização | i18n (pt-BR / en / es) |
 
@@ -22,11 +25,12 @@ Aplicação de página única (SPA) com roteamento por localidade, tema claro/es
 
 - **Multilíngue** — suporte a Português (padrão), Inglês e Espanhol via roteamento dinâmico `[locale]`
 - **Tema claro/escuro** — alternância sem flash (SSR-safe) via `next-themes`
-- **Navegação fixa com scroll spy** — âncoras internas destacam a seção visível, com menu dedicado no mobile
-- **Projetos com problema declarado** — cada card abre pelo problema resolvido, seguido de stack e links
-- **Blocos de cor como capa** — gradientes CSS no lugar de screenshots, sem asset externo
+- **Campo tipográfico em WebGL** — canvas único e persistente, que sobrevive à navegação e derrete/reforma o título a cada troca de rota
+- **Fallback sem WebGL** — mobile e reduced-motion recebem o mesmo desenho em tipografia real; o chunk do three.js (≈504 kB) só é buscado quando vai ser usado
+- **Página por projeto** — cada um dos 13 projetos tem rota própria, aberta pelo problema e seguida da solução, stack e links
+- **Índice editorial** — projetos e stack como listas tipográficas, sem grade de cards
 - **Acessibilidade** — HTML semântico, skip link, foco visível, contraste verificado e `prefers-reduced-motion`
-- **Seções completas** — Hero, Sobre, Habilidades, Projetos, Experiência, Formação e Contato
+- **Export estático** — 50 páginas HTML pré-renderizadas (3 localidades), sem runtime de servidor
 - **Dados estáticos tipados** — perfil carregado de arquivos JSON por localidade, sem chamadas a APIs externas
 - **Server Components por padrão** — máximo de performance e SEO com Next.js App Router
 
@@ -36,14 +40,13 @@ Aplicação de página única (SPA) com roteamento por localidade, tema claro/es
 src/
 ├── app/
 │   └── [locale]/          # Roteamento por localidade
+│       ├── projects/      # Índice + [slug] por projeto
+│       └── about/
 ├── features/              # Módulos por funcionalidade
-│   ├── hero/
-│   ├── about/
-│   ├── skills/
-│   ├── projects/
-│   ├── experience/
-│   ├── education/
-│   └── contact/
+│   ├── canvas/            # Camada WebGL: provider, canvas, fallback
+│   ├── home/
+│   ├── work/
+│   └── about/
 ├── components/
 │   ├── ui/                # Componentes genéricos reutilizáveis
 │   └── layout/            # Header, Footer, providers
