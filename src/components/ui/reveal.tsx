@@ -1,33 +1,46 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
-import type { ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
+import { MOTION, listDelay, prefersReducedMotion, registerGsap } from '@/lib/gsap/register'
 
 interface RevealProps {
   children: ReactNode
-  /** Stagger offset in seconds. */
-  delay?: number
+  /** Position in a list; the sibling offset it produces is capped. */
+  index?: number
   className?: string
 }
 
 /**
- * Fades content in once it scrolls into view. Falls back to a plain fade when
- * the visitor asks for reduced motion.
+ * Scroll-triggered arrival. Animates *from* the finished state, so the server
+ * HTML is already correct and a blocked script leaves the content visible.
  *
- * @example <Reveal delay={0.1}><ProjectCard … /></Reveal>
+ * @example <Reveal index={2}><ProjectRow … /></Reveal>
  */
-export function Reveal({ children, delay = 0, className }: RevealProps) {
-  const reduceMotion = useReducedMotion()
+export function Reveal({ children, index = 0, className }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element || prefersReducedMotion()) return
+
+    const gsap = registerGsap()
+    const context = gsap.context(() => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 24,
+        duration: MOTION.focal,
+        ease: MOTION.ease,
+        delay: listDelay(index),
+        scrollTrigger: { trigger: element, start: 'top 88%', once: true },
+      })
+    }, element)
+
+    return () => context.revert()
+  }, [index])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: reduceMotion ? 0 : 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-64px' }}
-      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }
