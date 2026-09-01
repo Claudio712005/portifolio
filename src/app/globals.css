@@ -91,13 +91,16 @@
 }
 
 @layer components {
-  /* Display lockup. Width axis is animated by GSAP; this is the rest state. */
+  /*
+   * Display lockup. A serif needs air where a grotesque wants tightening, so
+   * the tracking is far gentler than the previous face carried. Weight is the
+   * animated axis; this is the rest state.
+   */
   .type-display {
-    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
-    font-variation-settings: 'wdth' 100, 'opsz' 48;
-    font-weight: 800;
-    letter-spacing: -0.045em;
-    line-height: 0.86;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 0.9;
     text-wrap: balance;
   }
 
@@ -127,6 +130,11 @@
    * Collapsed disclosure state lives in CSS so the server HTML is correct
    * before hydration. GSAP's inline styles win during the transition.
    */
+  /* The intro never exists for a returning or reduced-motion visitor. */
+  .boot-done [data-boot] {
+    display: none !important;
+  }
+
   [data-disclosure] {
     overflow: hidden;
   }

@@ -1,16 +1,25 @@
-import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Instrument_Sans, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/layout/theme-provider'
+import { BootGuard } from '@/features/boot/components/boot-guard'
 import './globals.css'
 
 /**
- * Display voice. Variable width and optical size, both driven at runtime — the
- * headline breathes instead of sitting at one static weight.
+ * Display voice: a contemporary display serif, self-hosted rather than pulled
+ * from a font CDN. Its stroke contrast is the reason it is here — the WebGL
+ * layer splits colour where the surface bends, and thin strokes make that
+ * separation legible in a way a uniform grotesque never does.
+ *
+ * Licensed under the ITF Free Font License; the terms ship beside the files.
  */
-const bricolage = Bricolage_Grotesque({
-  subsets: ['latin'],
+const zodiak = localFont({
+  src: [
+    { path: './fonts/Zodiak-Variable.woff2', weight: '100 900', style: 'normal' },
+    { path: './fonts/Zodiak-VariableItalic.woff2', weight: '100 900', style: 'italic' },
+  ],
   display: 'swap',
-  axes: ['opsz', 'wdth'],
   variable: '--font-display',
+  fallback: ['ui-serif', 'Georgia', 'serif'],
 })
 
 const instrument = Instrument_Sans({
@@ -33,8 +42,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       suppressHydrationWarning
-      className={`${bricolage.variable} ${instrument.variable} ${jetbrainsMono.variable}`}
+      className={`${zodiak.variable} ${instrument.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <BootGuard />
+      </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}

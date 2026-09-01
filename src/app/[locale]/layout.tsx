@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
-import { RouteTransition } from '@/components/layout/route-transition'
+import { BootSequence } from '@/features/boot/components/boot-sequence'
+import { TransitionProvider } from '@/features/transition/components/transition-provider'
 import { TypeStageProvider } from '@/features/canvas/components/type-stage'
 import { TypeStageLayer } from '@/features/canvas/components/type-stage-layer'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
@@ -41,24 +42,37 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <TypeStageProvider initialLines={toHeadlineLines(profile.basics.name)}>
-      <div className="grain">
-        <TypeStageLayer />
+      <TransitionProvider>
+        <div className="grain">
+          <BootSequence
+            dict={dict.boot}
+            locale={params.locale}
+            projectCount={profile.projects.length}
+          />
 
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[4px] focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-accent-fg"
-        >
-          {dict.nav.skip_to_content}
-        </a>
+          <TypeStageLayer />
 
-        <Header dict={dict.nav} links={getNavLinks(dict.nav, params.locale)} locale={params.locale} />
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[4px] focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-accent-fg"
+          >
+            {dict.nav.skip_to_content}
+          </a>
 
-        <main id="main" className="relative z-10">
-          <RouteTransition>{children}</RouteTransition>
-        </main>
+          <Header
+            dict={dict.nav}
+            links={getNavLinks(dict.nav, params.locale)}
+            locale={params.locale}
+            place={profile.basics.location.split(',')[0]}
+          />
 
-        <Footer dict={dict.footer} name={profile.basics.name} year="2026" />
-      </div>
+          <main id="main" className="relative z-10">
+            {children}
+          </main>
+
+          <Footer dict={dict.footer} name={profile.basics.name} year="2026" />
+        </div>
+      </TransitionProvider>
     </TypeStageProvider>
   )
 }

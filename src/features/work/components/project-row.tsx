@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { clsx } from 'clsx'
 import { Icon } from '@/components/ui/icon'
+import { Magnetic } from '@/components/ui/magnetic'
+import { ScrambleText } from '@/components/ui/scramble-text'
 import type { ProjectEntry } from '@/lib/projects'
 import type { Dictionary } from '@/types/dictionary'
 
@@ -12,16 +14,23 @@ interface ProjectRowProps {
   emphasis?: 'lead' | 'index'
 }
 
+const VISIBLE_TECHS = 4
+
 /**
- * One project as a full-width editorial row rather than a card. The whole row
- * is the link; the accent rule underneath is what confirms the hover.
+ * One project as a full-width editorial row rather than a card. Hovering it
+ * resolves the title out of noise, brings the rest of the stack into view and
+ * pulls the arrow toward the cursor — three different rewards, not one fade.
  *
  * @example <ProjectRow project={entry} dict={dict.work} locale="pt-BR" />
  */
 export function ProjectRow({ project, dict, locale, emphasis = 'index' }: ProjectRowProps) {
+  const shown = project.techs.slice(0, VISIBLE_TECHS)
+  const hidden = project.techs.length - shown.length
+
   return (
     <Link
       href={`/${locale}/projects/${project.slug}`}
+      data-scramble-group
       className="group relative block border-t border-line py-7 transition-colors last:border-b hover:border-line-strong lg:py-9"
     >
       <span
@@ -41,13 +50,20 @@ export function ProjectRow({ project, dict, locale, emphasis = 'index' }: Projec
               emphasis === 'lead' ? 'text-d3' : 'text-2xl lg:text-3xl',
             )}
           >
-            {project.name}
+            <ScrambleText text={project.name} group />
           </h3>
+
           <p className="mt-2.5 max-w-2xl text-pretty text-sm leading-relaxed text-fg-muted lg:text-base">
             {project.tagline}
           </p>
-          <p className="mt-3 font-mono text-[11px] leading-relaxed text-fg-subtle">
-            {project.techs.slice(0, 4).join('  ·  ')}
+
+          <p className="mt-3 font-mono text-[11px] leading-relaxed text-fg-subtle transition-colors group-hover:text-fg-muted">
+            {shown.join('  ·  ')}
+            {hidden > 0 && (
+              <span className="ml-2 inline-block text-accent opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                +{hidden}
+              </span>
+            )}
           </p>
         </div>
 
@@ -55,12 +71,14 @@ export function ProjectRow({ project, dict, locale, emphasis = 'index' }: Projec
           {project.year}
         </span>
 
-        <span
-          aria-hidden="true"
-          className="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-full border border-line text-fg-subtle transition-all duration-500 ease-out group-hover:border-accent group-hover:text-accent lg:col-start-4"
-        >
-          <Icon name="arrow-right" className="h-4 w-4 transition-transform duration-500 ease-out group-hover:translate-x-0.5" />
-        </span>
+        <Magnetic strength={0.45} className="col-start-2 justify-self-end lg:col-start-4">
+          <span
+            aria-hidden="true"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-fg-subtle transition-colors duration-500 ease-out group-hover:border-accent group-hover:text-accent"
+          >
+            <Icon name="arrow-right" className="h-4 w-4" />
+          </span>
+        </Magnetic>
       </div>
     </Link>
   )

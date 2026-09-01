@@ -9,6 +9,7 @@ You are also a UX/UI Designer with 5+ years of experience, specialized in buildi
 - Tailwind
 - Three.js — the persistent WebGL type field behind every route
 - GSAP (ScrollTrigger) — the single motion system; do not reintroduce Framer Motion
+- Zodiak, self-hosted in `src/app/fonts/` under the ITF Free Font License
 - i18n
 
 ## Architecture
@@ -33,3 +34,7 @@ You are also a UX/UI Designer with 5+ years of experience, specialized in buildi
 - Never use hard String in components, use i18n.
 - Motion must animate *from* the finished state, so a blocked script leaves the
   page visible and correct.
+- No two sections may share an entrance. One repeated fade across the page is
+  the same as having no entrance at all.
+- Text effects keep the real string in the DOM and mirror a hidden copy for the
+  effect, so search and assistive tech never read the noise.

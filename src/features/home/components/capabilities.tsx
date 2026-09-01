@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/ui/reveal'
+import { WeightShift } from '@/components/ui/weight-shift'
 import { SectionLabel } from '@/components/ui/section-label'
 import type { Dictionary } from '@/types/dictionary'
 import type { SkillGroup } from '@/types/profile'
@@ -27,9 +28,9 @@ export function Capabilities({ dict, groups }: CapabilitiesProps) {
             <Reveal key={group.category} index={index}>
               <div className="grid grid-cols-1 items-baseline gap-2 border-t border-line py-7 last:border-b md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] md:gap-10">
                 <dt className="flex items-baseline gap-3">
-                  <span className="type-display text-2xl text-fg lg:text-3xl">
+                  <WeightShift className="type-display text-2xl text-fg lg:text-3xl">
                     {dict.skills.categories[group.category] ?? group.category}
-                  </span>
+                  </WeightShift>
                   <span className="type-meta text-fg-subtle">
                     {String(group.skills.length).padStart(2, '0')}
                   </span>
