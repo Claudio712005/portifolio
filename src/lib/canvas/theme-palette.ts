@@ -30,5 +30,5 @@ export function readDisplayFontFamily(): string {
     .getPropertyValue('--font-display')
     .trim()
 
-  return family ? `${family}, ui-sans-serif, system-ui, sans-serif` : 'ui-sans-serif, sans-serif'
+  return family ? `${family}, ui-serif, Georgia, serif` : 'ui-serif, serif'
 }
