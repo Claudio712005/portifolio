@@ -11,40 +11,45 @@
     "close_menu": "Close menu",
     "theme_toggle": "Toggle light and dark theme",
     "language_select": "Select language",
+    "home": "Home",
+    "work": "Work",
     "about": "About",
-    "skills": "Skills",
-    "projects": "Projects",
-    "experience": "Experience",
-    "education": "Education",
     "contact": "Contact"
   },
-  "hero": {
-    "kicker": "Available for new projects",
-    "cta_projects": "View projects",
-    "cta_contact": "Get in touch",
-    "cta_resume": "Download CV",
-    "stats": [
-      {
-        "label": "Years in production",
-        "value": "3+"
-      },
-      {
-        "label": "Critical sectors",
-        "value": "Banking & Energy"
-      },
-      {
-        "label": "Legacy to cloud",
-        "value": "Java 8 → 21"
-      }
-    ]
+  "home": {
+    "scroll_cue": "Scroll",
+    "work_title": "Selected work",
+    "work_lead": "Each one started from a concrete problem. The stack came after.",
+    "work_all": "View all projects",
+    "capabilities_title": "Where I'm useful",
+    "capabilities_lead": "Everything listed here has shipped in a real project, not just a tutorial.",
+    "trajectory_title": "Trajectory",
+    "trajectory_all": "See the full trajectory",
+    "contact_title": "Let's talk"
+  },
+  "work": {
+    "title": "Projects",
+    "lead": "A selection of my own projects. Each one started from a concrete problem — the stack came after.",
+    "count_label": "projects",
+    "featured_label": "Featured",
+    "year_label": "Year",
+    "stack_label": "Stack",
+    "problem_title": "The problem",
+    "approach_title": "The approach",
+    "view_code": "View code",
+    "view_live": "View live",
+    "no_repo": "Private repository",
+    "back": "All projects",
+    "next_label": "Next project"
   },
   "about": {
-    "kicker": "About",
     "title": "Boring systems, in the best sense of the word",
+    "lead": "Backend engineer on systems that cannot go down.",
     "paragraphs": [
       "I work at both ends of a system's life. On one side, mission-critical legacy in the energy sector — Java 8, JSF, EJB — where an export that times out means a late regulatory report. On the other, reactive banking microservices in Java 21 and Kotlin, with WebFlux, Redis and circuit breakers absorbing peak load. Both ends teach the same lesson from opposite directions: what counts is shipping without taking down the business that is already running.",
       "I like systems that are predictable, observable and easy for the next person to touch. In practice that means hexagonal architecture with a framework-free domain, decisions recorded in ADRs rather than in the author's memory, and tests that run against the real service through Testcontainers. I am currently doing a postgraduate diploma in Software Architecture at FIAP and writing plenty of Kotlin, Go and — lately — AI application infrastructure with MCP and RAG."
     ],
+    "facts_title": "At a glance",
     "facts": [
       {
         "label": "Based in",
@@ -62,12 +67,17 @@
         "label": "Studying",
         "value": "Software Architecture — FIAP"
       }
-    ]
+    ],
+    "experience_title": "Experience",
+    "education_title": "Education",
+    "skills_title": "Stack in production",
+    "skills_lead": "Grouped by layer.",
+    "current_label": "Current",
+    "stack_label": "Stack",
+    "show_more": "View details",
+    "show_less": "Hide details"
   },
   "skills": {
-    "kicker": "Stack",
-    "title": "Tools I use in production",
-    "subtitle": "Grouped by layer. Everything listed here has shipped in a real project, not just a tutorial.",
     "categories": {
       "backend": "Backend",
       "architecture": "Architecture",
@@ -81,47 +91,18 @@
       "frontend": "Frontend"
     }
   },
-  "projects": {
-    "kicker": "Projects",
-    "title": "What I built, and why",
-    "subtitle": "A selection of my own projects. Each started from a concrete problem — the stack came second.",
-    "featured_label": "Featured",
-    "problem_label": "Problem",
-    "stack_label": "Stack",
-    "view_code": "View code",
-    "view_live": "View live",
-    "no_repo": "Private repository",
-    "more_title": "Other projects",
-    "view_more": "Show more projects",
-    "view_less": "Show fewer",
-    "read_more": "Read more",
-    "read_less": "Read less"
-  },
-  "experience": {
-    "kicker": "Track record",
-    "title": "Professional experience",
-    "subtitle": "From intern to mid-level in a little over two years, always on systems that cannot go down.",
-    "current_label": "Current",
-    "stack_label": "Stack",
-    "show_more": "View details",
-    "show_less": "Hide details"
-  },
-  "education": {
-    "kicker": "Education",
-    "title": "Education and certifications"
-  },
   "contact": {
-    "kicker": "Contact",
     "title": "Let's talk about your backend",
     "description": "Open to remote roles in Brazil and Europe, and to technical conversations with no strings attached. I reply by email within one business day.",
     "email_label": "Send an email",
     "github_label": "GitHub",
     "linkedin_label": "LinkedIn",
     "resume_label": "Résumé (PDF)",
-    "location_label": "Location"
+    "location_label": "Location",
+    "availability_label": "Availability"
   },
   "footer": {
-    "built_with": "Built with Next.js, TypeScript and Tailwind CSS.",
+    "built_with": "Built with Next.js, TypeScript, Three.js and GSAP.",
     "rights": "All rights reserved."
   }
 }
