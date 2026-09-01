@@ -1,14 +1,15 @@
+import { PageStage } from '@/components/layout/page-stage'
+import { StageMeta } from '@/features/home/components/stage-meta'
+import { Manifesto } from '@/features/home/components/manifesto'
+import { SelectedWork } from '@/features/home/components/selected-work'
+import { Capabilities } from '@/features/home/components/capabilities'
+import { Trajectory } from '@/features/home/components/trajectory'
+import { ContactBlock } from '@/features/home/components/contact-block'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import { getProfile } from '@/lib/get-profile'
 import { groupSkillsByCategory } from '@/lib/group-skills'
-import { splitProjects } from '@/lib/split-projects'
-import { Hero } from '@/features/hero/components/hero'
-import { About } from '@/features/about/components/about'
-import { Skills } from '@/features/skills/components/skills'
-import { Projects } from '@/features/projects/components/projects'
-import { Experience } from '@/features/experience/components/experience'
-import { Education } from '@/features/education/components/education'
-import { Contact } from '@/features/contact/components/contact'
+import { featuredEntries, toProjectEntries } from '@/lib/projects'
+import { toHeadlineLines } from '@/lib/headline'
 
 interface PageProps {
   params: { locale: string }
@@ -20,18 +21,26 @@ export default async function HomePage({ params }: PageProps) {
     getProfile(params.locale),
   ])
 
-  const skillGroups = groupSkillsByCategory(profile.skills)
-  const { featured, rest } = splitProjects(profile.projects)
+  const entries = toProjectEntries(profile.projects)
 
   return (
     <>
-      <Hero dict={dict.hero} basics={profile.basics} />
-      <About dict={dict.about} />
-      <Skills dict={dict.skills} groups={skillGroups} />
-      <Projects dict={dict.projects} featured={featured} rest={rest} />
-      <Experience dict={dict.experience} experience={profile.experience} />
-      <Education dict={dict.education} education={profile.education} />
-      <Contact dict={dict.contact} basics={profile.basics} />
+      <PageStage title={profile.basics.name} lines={toHeadlineLines(profile.basics.name)}>
+        <StageMeta dict={dict.home} basics={profile.basics} />
+      </PageStage>
+
+      <div className="relative bg-bg">
+        <Manifesto basics={profile.basics} />
+        <SelectedWork
+          dict={dict}
+          projects={featuredEntries(entries)}
+          total={entries.length}
+          locale={params.locale}
+        />
+        <Capabilities dict={dict} groups={groupSkillsByCategory(profile.skills)} />
+        <Trajectory dict={dict} experience={profile.experience} locale={params.locale} />
+        <ContactBlock dict={dict} basics={profile.basics} />
+      </div>
     </>
   )
 }
