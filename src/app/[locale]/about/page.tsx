@@ -7,6 +7,7 @@ import { Colophon } from '@/features/about/components/colophon'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import { getProfile } from '@/lib/get-profile'
 import { groupSkillsByCategory } from '@/lib/group-skills'
+import { toHeadlineLines } from '@/lib/headline'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -26,12 +27,14 @@ export default async function AboutPage({ params }: PageProps) {
   ])
 
   const groups = groupSkillsByCategory(profile.skills)
-  /* The person, not the professional: the home page carries the full name. */
-  const firstName = profile.basics.name.split(' ')[0]
 
   return (
     <>
-      <PageStage title={dict.about.title} lines={[firstName]} size="short">
+      <PageStage
+        title={dict.about.title}
+        lines={toHeadlineLines(dict.nav.about)}
+        size="short"
+      >
         <p className="type-display max-w-4xl text-pretty text-d3 text-fg">{dict.about.title}</p>
       </PageStage>
 
